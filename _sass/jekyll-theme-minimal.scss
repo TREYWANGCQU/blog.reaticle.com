@@ -67,7 +67,7 @@ a:hover small {
 }
 
 .wrapper {
-  width:860px;
+  width:1200px;
   margin:0 auto;
   
 }
@@ -198,11 +198,10 @@ strong {
 }
 
 section {
-  width:500px;
+  width:810px;
   float:right;
-  padding:5px;
-  padding-top:20px;
-  padd0ng-bottom:20px;
+  padding:20px;
+  margin-bottom:50px;
   border-radius:5px;
   background: rgb(255,255,255);
   background: -moz-linear-gradient(90deg, rgba(255,255,255,0.8519782913165266) 0%, rgba(232,232,232,1) 100%);
@@ -210,6 +209,9 @@ section {
   background: linear-gradient(90deg, rgba(255,255,255,0.8519782913165266) 0%, rgba(232,232,232,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e8e8e8",GradientType=1);
   
+}
+section p{
+color:#0e0e0e;
 }
 
 small {
