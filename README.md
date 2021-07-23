@@ -2,6 +2,8 @@
 
 Memoirs about me, the music and the night. Memoirs about think-ism and practice-ism
 
+![me](assets/img/logome.png)
+
 # Support
 
 [Build Status](https://github.com/pages-themes/minimal/actions/workflows/ci.yaml) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-minimal.svg)](https://badge.fury.io/rb/jekyll-theme-minimal)
