@@ -3,7 +3,7 @@
 
 Memoirs about me, the music and the night. Memoirs about think-ism and practice-ism
 
-![logo](assets/img/logome.png)
+![logo](assets/img/logo2.png)
 
 # Support
 
