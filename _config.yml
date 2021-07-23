@@ -14,5 +14,6 @@ header_pages:
 
 markdown:         kramdown
 highlighter:      rouge
-
+minima:
+  date_format: "%b %-d, %Y"
 
