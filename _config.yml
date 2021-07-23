@@ -1,6 +1,6 @@
 title: YWANG
 logo: /assets/img/logome.png
 description: Memoirs about me, the music and the night. Memoirs about think-ism and practice-ism.
-show_downloads: true
+show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
