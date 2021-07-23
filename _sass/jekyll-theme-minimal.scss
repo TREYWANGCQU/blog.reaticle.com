@@ -9,7 +9,7 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#005353",endColorstr="#008b8b",GradientType=1);
   padding:50px;
   font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#b7b3b3;
+  color:#0e0e0e;
   font-weight:400;
   
 }
@@ -38,6 +38,9 @@ h2 {
 h3, h4, h5, h6 {
   color:#494949;
 }
+
+header p {
+color:#b7b3b3;}
 
 header a {
   color:#bbb9b9;
@@ -210,9 +213,7 @@ section {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e8e8e8",GradientType=1);
   
 }
-section p{
-color:#0e0e0e;
-}
+
 
 small {
   font-size:11px;
