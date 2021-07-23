@@ -1,6 +1,14 @@
 title: YWANG
-logo: /assets/img/logome.png
+logo: /assets/img/logo.png
 description: Memoirs about me, the music and the night. Memoirs about think-ism and practice-ism.
 show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
+
+github_username:  treywangcqu
+twitter_username: treywangcqu
+
+
+
+markdown:         kramdown
+highlighter:      rouge
