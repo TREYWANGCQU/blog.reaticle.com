@@ -18,5 +18,4 @@ minima:
   date_format: "%b %-d, %Y"
 
 paginate: 7
-paginate_path: "/blog/page:num/"
 
