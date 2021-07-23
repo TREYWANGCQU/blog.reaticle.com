@@ -2,7 +2,7 @@
 
 Memoirs about me, the music and the night. Memoirs about think-ism and practice-ism
 
-![me](assets/img/logome.png)
+![Thumbnail of Minimal](assets/img/logome.png)
 
 # Support
 
