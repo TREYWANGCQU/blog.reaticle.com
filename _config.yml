@@ -9,8 +9,8 @@ github_username:  treywangcqu
 twitter_username: treywangcqu
 
 header_pages:
-  about.md
-  blog.md
+  - about.md
+  - blog.md
 
 markdown:         kramdown
 highlighter:      rouge
