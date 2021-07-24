@@ -72,7 +72,7 @@ a:hover small {
 }
 
 .wrapper {
-  max-width:1200px;
+  width:1200px;
   margin:0 auto;
   
 }
@@ -180,11 +180,11 @@ footer {
 
 @media print, screen and (max-width: 1300px) {
 
-  div.wrapper {
+  .wrapper {
     width:100%;
     margin:0;
   }
-  section{
+  section {
     width:60%;
     
   }
