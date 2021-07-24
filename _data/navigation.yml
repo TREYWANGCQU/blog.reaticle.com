@@ -1,0 +1,9 @@
+main:
+  - title: "Home"
+    url: /index.md
+  - title: "Blog"
+    url: /blog.md
+  - title: "Tags"
+    url: /tag.md
+  - title: "About"
+    url: /about.md
