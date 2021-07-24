@@ -1,13 +1,13 @@
 nav_home:
 
 - title: Home
-  url: /home.md
+  url: /home/
 
 - title: Blog
-  url: /about.md
+  url: /about/
 
 - title: Tags
-  url: /tag.md
+  url: /tag/
   
 - title: About
-  url: /about.md
+  url: /about/
