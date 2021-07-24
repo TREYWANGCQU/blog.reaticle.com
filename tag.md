@@ -1,6 +1,6 @@
 ---
 layout:  tagpage
 title:  tags
-prelink: /tags/
+permalink: /tags/
 
 ---
