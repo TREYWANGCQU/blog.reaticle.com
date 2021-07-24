@@ -4,10 +4,10 @@ nav_home:
   url: /home/
 
 - title: Blog
-  url: /about/
+  url: /blog/
 
 - title: Tags
-  url: /tag/
+  url: /tags/
   
 - title: About
   url: /about/
