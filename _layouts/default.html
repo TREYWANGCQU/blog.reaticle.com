@@ -19,6 +19,9 @@
     <![endif]-->
   </head>
   <body>
+<div class='spinner-wrapper'>
+    <div class="spinner"></div>
+</div>
     <div class="wrapper">
      {%  include header.html %}
       <section class="animate__animated animate__fadeInUp">
@@ -30,6 +33,14 @@
     </div>
     
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    <script>
+    let spinnerWrapper = document.querySelector('.spinner-wrapper');
+
+    window.addEventListener('load', function () {
+        // spinnerWrapper.style.display = 'none';
+        spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+    });
+</script>
     {% if site.google_analytics %}
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
