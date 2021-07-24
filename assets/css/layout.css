@@ -100,7 +100,6 @@
 
 .spinner {
     position: relative;
-    width: 8rem;
-    height: 8rem;
-    border-radius: 50%;
+    width: 50px;
+    
 }
