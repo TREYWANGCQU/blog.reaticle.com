@@ -39,24 +39,26 @@ h3, h4, h5, h6 {
   color:#494949;
 }
 
-header p {
-color:#b7b3b3;}
-footer p {
+header p, footer p {
 color:#b7b3b3;}
 
-header a {
+
+header a, footer a{
   color:#bbb9b9;
 }
 header a:hover, a:focus {
   color:#f0f2f3;
 }
+footer a:hover, a:focus {
+  color:#f0f2f3;
+}
 a {
-  color:#267CB9;
+  color:#008b8b;
   text-decoration:none;
 }
 
 a:hover, a:focus {
-  color:#069;
+  color:#074747;
   font-weight: bold;
 }
 
