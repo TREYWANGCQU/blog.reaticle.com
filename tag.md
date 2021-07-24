@@ -1,4 +1,6 @@
 ---
-layout: tagpage
+layout:  tagpage
+title:  tags
+prelink: /tags/
 
 ---
