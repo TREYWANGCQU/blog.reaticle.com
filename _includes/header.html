@@ -18,11 +18,11 @@
         </label>
 
         <div class="trigger">
-          <a class="page-link hvr-grow" href="/index/"><i class="fas fa-house-user"></i></a>
+          <a class="page-link " href="/index"><i class="fas fa-house-user"></i></a>
                {% for item in site.data.Navigation.nav_home %}
 
            
-            <a class="page-link hvr-grow" href="{{item.url | relative_url}}">{{item.title}}</a>
+            <a class="page-link" href="{{item.url | relative_url}}">{{item.title}}</a>
          
           {%- endfor -%}
         </div>
