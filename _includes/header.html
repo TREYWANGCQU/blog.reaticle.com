@@ -1,11 +1,11 @@
-<header>
+<header >
        
         
         {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Logo" />
+        <a href="{{ "/" | absolute_url }}" class="hvr-grow-rotate"> <img src="{{site.logo | relative_url}}" alt="Logo" />
         {% endif %}
-         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
+         <h1>{{ site.title | default: site.github.repository_name }}</a></h1>
+        <p class="hvr-grow">{{ site.description | default: site.github.project_tagline }}</p>
      
       <nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
@@ -18,11 +18,11 @@
         </label>
 
         <div class="trigger">
-          
+          <a class="page-link hvr-grow" href="/index/"><i class="fas fa-house-user"></i></a>
                {% for item in site.data.Navigation.nav_home %}
 
            
-            <a class="page-link" href="{{item.url | relative_url}}">{{item.title}}</a>
+            <a class="page-link hvr-grow" href="{{item.url | relative_url}}">{{item.title}}</a>
          
           {%- endfor -%}
         </div>
