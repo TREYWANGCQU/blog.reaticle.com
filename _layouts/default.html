@@ -11,7 +11,10 @@
 {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="/assets/css/layout.css">
-    <link rel="stylesheet" href="/assets/css/all.css">
+    <link href="/assets/css/fontawesome.css" rel="stylesheet">
+    <link href="/assets/css/brands.css" rel="stylesheet">
+    <link href="/assets/css/solid.css" rel="stylesheet">
+
     <link rel="stylesheet" href="/assets/css/animate.min.css">
     <link rel="stylesheet" href="/assets/css/hover-min.css">
     <!--[if lt IE 9]>
@@ -37,7 +40,7 @@
     let spinnerWrapper = document.querySelector('.spinner-wrapper');
 
     window.addEventListener('load', function () {
-        // spinnerWrapper.style.display = 'none';
+         //spinnerWrapper.style.display = 'none';
         spinnerWrapper.parentElement.removeChild(spinnerWrapper);
     });
 </script>

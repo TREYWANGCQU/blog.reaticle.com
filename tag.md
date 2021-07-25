@@ -1,6 +1,6 @@
 ---
 layout:  tagpage
-title:  tags
+title:  Tags
 permalink: /tags/
 
 ---

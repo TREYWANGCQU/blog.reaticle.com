@@ -9,7 +9,16 @@ github_username:  treywangcqu
 twitter_username: treywangcqu
 
 
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+
 markdown:         kramdown
 highlighter:      rouge
 
 
+
+paginate: 7
+paginate_path: "/blog/page:num/"

@@ -2,9 +2,9 @@
 
 layout: post
 
-title: Style guide
-author: jekyll/minima
-tag: github web UI
+title: Github-page建站小记
+author: 
+tags: github web UI
 
 ---
 

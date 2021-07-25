@@ -16,7 +16,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#222;
+  color:#008b8b;
   margin:0 0 20px;
 }
 
@@ -32,13 +32,7 @@ h1 {
   font-size:28px;
 }
 
-h2 {
-  color:#393939;
-}
 
-h3, h4, h5, h6 {
-  color:#494949;
-}
 
 header p, footer p {
 color:#b7b3b3;}
@@ -181,6 +175,70 @@ footer {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
+
+/**
+ * post list
+ */
+
+ .blog-post{
+  width:auto;
+  margin-bottom: 41px;
+  color:#6d6b6b;
+}
+
+.post-side-meta{
+ position:absolute;
+ 
+ width:70px;
+ text-align:center;
+ 
+ 
+}
+.post-side-meta .day{
+ font-size:25px;
+ line-height: 21px;
+ font-weight:1000;
+ display:block;
+}
+
+.post-side-meta .month{
+ font-size:16px;
+ 
+ font-weight:600;
+ display:block;
+}
+
+.post-content{
+ position:relative;
+ padding-left:90px;
+ 
+}
+.post-content h2{
+  margin-bottom:12px;
+}
+.post-content span{
+  margin-right: 10px;
+}
+
+.pagination {
+  text-align: center;
+}
+.cusInnerPage {
+  margin: 2px;
+  padding: 3px 10px;
+  border: 1px solid #bbb9b9;
+}
+a.cusInnerPage:hover{
+	background : #dbdbdb;
+}
+.cusCurrentPage{
+  margin: 2px;
+  padding: 3px 10px;
+  border: 1px solid #bbb9b9;
+  background:#dbdbdb;
+}
+
+
 @media print, screen and (max-width: 1300px) {
 
   .wrapper {
@@ -194,6 +252,18 @@ footer {
   header img{
   max-width:270px;
   }
+}
+
+@media print, screen and (max-height: 620px){
+  section, header, footer {
+    float:none;
+    position:static;
+    width:auto;
+  }
+  header img {
+    width: 270px;
+  }
+
 }
 
 @media print, screen and (max-width: 960px) {
@@ -249,7 +319,13 @@ footer {
     padding:15px;
   }
 
-
+  .post-side-meta{
+    display: none;
+  }
+  .post-content{
+    padding: 10px;
+    width: auto;
+  }
 
 @media print {
   body {
@@ -258,6 +334,8 @@ footer {
     color:#444;
   }
 }
+
+
 }
 
  @media print, screen and (max-width: 320px) {
