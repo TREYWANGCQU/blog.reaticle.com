@@ -18,14 +18,15 @@
         </label>
 
         <div class="trigger">
-          <a class="page-link " href="/index"><i class="fas fa-house-user"></i>&nbsp;</a>
-               {% for item in site.data.Navigation.nav_home %}
+         
+          {% for item in site.data.Navigation.nav_home %}
 
            
             <a class="page-link" href="{{item.url | relative_url}}">{{item.title}}</a>
          
           {%- endfor -%}
         </div>
+        
       </nav>
   
        

@@ -1,19 +1,27 @@
 ---
 layout: default
 ---
-<div class="post">
-<small>{{ page.date | date: "%-d %B %Y" }}</small>
-<h1>{{ page.title }}</h1>
 
-{% if page.tags %}
-  <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
+{% if page.lang %}
+<div class="post" lang="{{page.lang}}">
+{% else %}
+<div class="post">
 {% endif %}
 
-<p class="view">author: {{ page.author | default: site.author }}</p>
+<h1>{{ page.title }}</h1>
+<div class="meta-text"><i class="fas fa-calendar-day"></i>&nbsp;Date:&nbsp;{{ page.date | date: "%A, %-d-%m-%Y" }}&nbsp;&nbsp;&nbsp;<i class="fas fa-pen"></i>&nbsp;Author:&nbsp;  {{ page.author | default: site.author }} </div>
+<div class="post-tags"><i class="fas fa-thumbtack"></i>&nbsp;tags:
+  {% for tag in page.tags %}
+    <a href="/tag/{{ tag }}"> {{ tag }}</a>
+  {% endfor %}</div>
 
-<div class="post-content">
-  {{ content }}
-</div>
+  <div class="post-content">
+    <hr>
+    {{ content }}
+  </div>
+  
+
+
 
 
   

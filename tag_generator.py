@@ -23,7 +23,10 @@ for filename in filenames:
     for line in f:
         if crawl:
             current_tags = line.strip().split()
-            if current_tags[0] == 'tags:':
+            
+            if current_tags ==[]:
+                continue
+            if current_tags[0]== 'tags:':
                 total_tags.extend(current_tags[1:])
                 crawl = False
                 break

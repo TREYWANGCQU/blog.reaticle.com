@@ -1,15 +1,12 @@
 ---
-
 layout: post
-lang: cn
-title: 中文样式导航
-author: L. Qian
+
+title: Default style guide
+author: <a href="https://github.com/jekyll/minima" >jekyll/minima</a>
 tags: github web UI
-
-
 ---
 
-文字可为 **加粗**, _强调_.
+Text can be **bold**, _italic_.
 
 
 
@@ -17,7 +14,7 @@ There should be whitespace between paragraphs.
 
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
-# 标题 1
+# Header 1
 
 This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 

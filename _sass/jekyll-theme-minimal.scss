@@ -50,6 +50,7 @@ footer a:hover, a:focus {
 a {
   color:#008b8b;
   text-decoration:none;
+  
 }
 
 a:hover, a:focus {
@@ -133,18 +134,21 @@ kbd {
 }
 
 header {
-  width:270px;
+  width:300px;
   float:left;
   position:fixed;
   -webkit-font-smoothing:subpixel-antialiased;
 }
-
+header img {
+  width: 200px;
+}
 
 
 section {
   width:810px;
-  float:right;
+  
   padding:20px;
+  margin-left: 350px;
   margin-bottom:50px;
   border-radius:5px;
   background: rgb(255,255,255);
@@ -162,7 +166,7 @@ small {
 
 hr {
   border:0;
-  background:#e5e5e5;
+  background:#cecece;
   height:1px;
   margin:0 0 20px;
 }
@@ -207,16 +211,38 @@ footer {
  font-weight:600;
  display:block;
 }
-
+.post p{
+  font-size: 16px;
+}
+.meta-text{
+  color: #074747;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.5;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.post-tags a{
+  border-radius:10px ;
+  color:#e4e4e4;
+  background-color: #008a8a;
+  display: inline-block;
+  padding: 0 10px 0 12px;
+  margin-right: 5px;
+}
 .post-content{
+  margin-top:20px;
+}
+
+.post-header{
  position:relative;
  padding-left:90px;
  
 }
-.post-content h2{
+.post-header h2{
   margin-bottom:12px;
 }
-.post-content span{
+.post-header span{
   margin-right: 10px;
 }
 
@@ -261,7 +287,10 @@ a.cusInnerPage:hover{
     width:auto;
   }
   header img {
-    width: 270px;
+    width: 200px;
+  }
+  section {
+    margin:auto;
   }
 
 }
@@ -322,7 +351,7 @@ a.cusInnerPage:hover{
   .post-side-meta{
     display: none;
   }
-  .post-content{
+  .post-header{
     padding: 10px;
     width: auto;
   }
