@@ -13,6 +13,7 @@ body {
   color:#0e0e0e;
   font-weight:400;
   
+  
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -55,7 +56,7 @@ a {
 
 a:hover, a:focus {
   color:#074747;
-  font-weight: bold;
+  
 }
 
 a small {
@@ -76,22 +77,22 @@ a:hover small {
 }
 
 blockquote {
-  border-left:1px solid #e5e5e5;
+  border-left:1px solid #e4e3e3;
   margin:0;
   padding:0 0 0 20px;
   font-style:italic;
 }
 
 code, pre {
-  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, "LiSHU-WEB","微软雅黑","Microsoft YaHei";
   color:#333;
 }
 
 pre {
   padding:8px 15px;
-  background: #f8f8f8;
+  background: #e4e3e3;
   border-radius:5px;
-  border:1px solid #e5e5e5;
+  border:1px solid #e4e3e3;
   overflow-x: auto;
 }
 
@@ -103,7 +104,7 @@ table {
 th, td {
   text-align:left;
   padding:5px 10px;
-  border-bottom:1px solid #e5e5e5;
+  border-bottom:1px solid #e4e3e3;
 }
 
 dt {
@@ -184,6 +185,24 @@ footer {
  * post list
  */
 
+ .post:lang(cn) em{
+  
+  font-family:  "Noto Sans", "Helvetica Neue", Helvetica, Arial,"LiSHU-WEB", "微软雅黑","Microsoft YaHei", sans-serif;
+  font-style: normal;
+  font-size: 17px;
+  }
+
+  .language-plaintext{
+    font-family:  "Noto Sans", "Helvetica Neue", Helvetica, Arial, "微软雅黑","Microsoft YaHei", sans-serif;
+    padding: 0 5px 0 5px;
+    background: #e4e3e3;
+  }
+  code:lang(cn){
+    font-size: 17px;
+  }
+
+
+
  .blog-post{
   width:auto;
   margin-bottom: 41px;
@@ -229,6 +248,10 @@ footer {
   display: inline-block;
   padding: 0 10px 0 12px;
   margin-right: 5px;
+}
+
+.post-tags a:hover{
+  color:#fffefe;
 }
 .post-content{
   margin-top:20px;

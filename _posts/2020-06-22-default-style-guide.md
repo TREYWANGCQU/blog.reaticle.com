@@ -6,7 +6,7 @@ author: <a href="https://github.com/jekyll/minima" >jekyll/minima</a>
 tags: github web UI
 ---
 
-Text can be **bold**, _italic_.
+Text can be **bold**, _italic_, ```highlight```.
 
 
 

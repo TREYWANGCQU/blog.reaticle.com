@@ -8,6 +8,7 @@ theme: jekyll-theme-minimal
 github_username:  treywangcqu
 twitter_username: treywangcqu
 author: Y.WANG
+email: treywangcqu@gmail.com
 
 plugins:
   - jekyll-feed
