@@ -1,6 +1,7 @@
 ---
 title: Unexpecting tips to termux
 layout: post
+tags: Andriod Linux
 ---
 
 ## Storage Permission
