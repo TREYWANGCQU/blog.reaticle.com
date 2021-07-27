@@ -1,10 +1,11 @@
 ---
-title: unexpecting tips to termux
+title: Unexpecting tips to termux
 layout: post
 ---
 
 ## Storage Permission
 Why did ``` termux keep losing permission ``` even if  ``` termux-setup-storage ``` runs again after again?
+
 **Solution**:  
 * go to termux app info in android settings 
 * *disable storage/media files permission*
