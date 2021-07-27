@@ -83,6 +83,11 @@ blockquote {
   font-style:italic;
 }
 
+blockquote:lang(cn) {
+	font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,"LiSHU-WEB", "微软雅黑","Microsoft YaHei", sans-serif;
+	font-style:normal;
+}
+
 code, pre {
   font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, "LiSHU-WEB","微软雅黑","Microsoft YaHei";
   color:#333;
