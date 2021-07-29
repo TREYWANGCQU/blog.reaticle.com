@@ -22,11 +22,11 @@ info:
 Problem like
 
 ```shell
-u0_a383@localhost sshd
+sshd
 #nothing happen
-u0_a383@localhost nmap localhost
+nmap localhost
 #you won't find 8022 port
-u0_a383@localhost sshd -d
+sshd -d
 #It seems good. 8022 port is verfied. But stopping is again once a connecting from ssh client
 ```
 
