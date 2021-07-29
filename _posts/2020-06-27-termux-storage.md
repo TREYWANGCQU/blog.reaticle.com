@@ -35,3 +35,10 @@ u0_a383@localhost sshd -d
 * Add **ListenAddress 0.0.0.0:65522**(any port over 6000 seems OK) to _/data/data/com.termux/files/usr/etc/ssh/sshd_config
 * Run **sshd -d** again.
 
+## 3 Fail to gem install  Nokogiri 
+**Solution**:
+
+```shell
+pkg install ruby clang make pkg-config libxslt
+gem install nokogiri --platform=ruby -- --use-system-libraries
+```
