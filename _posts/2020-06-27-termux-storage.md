@@ -55,3 +55,7 @@ gem install nokogiri --platform=ruby -- --use-system-libraries
           end
       end
 ```
+## 4 visit from network 
+```
+bundle exec jekyll serve -w --host=0.0.0.0
+```
