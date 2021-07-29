@@ -1,5 +1,5 @@
 ---
-title: Unexpecting tips to termux
+title: Tips to Unexpected Problems When Using Termux
 layout: post
 tags: Andriod Linux
 ---
