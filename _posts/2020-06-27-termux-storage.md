@@ -50,7 +50,6 @@ gem install nokogiri --platform=ruby -- --use-system-libraries
      @proc_version ||=
           begin
             Pathutil.new("/proc/version").read
-          rescue Errno::ENOENT
           rescue Errno::ENOENT, Errno::EACCES
             nil
           end
