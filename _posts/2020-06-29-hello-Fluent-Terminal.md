@@ -38,7 +38,8 @@ sh -c "$(curl -c HTTP_PROXY=user:pass@my.proxy.server:port https://raw.githubuse
 
 # Oh-my-zsh
 More doc is [here](https://github.com/ohmyzsh/ohmyzsh)
-powerline font is [here](https://github.com/powerline/fonts)
+
+And powerline font is [here](https://github.com/powerline/fonts)
 ### helpful plugins
 * zsh-autosuggestions->[LINK](https://github.com/zsh-users/zsh-autosuggestions)
 * zsh-syntax-highlighting->[LINK](https://github.com/zsh-users/zsh-syntax-highlighting)
