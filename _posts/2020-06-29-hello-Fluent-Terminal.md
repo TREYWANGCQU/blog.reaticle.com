@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Set a Proxy for Terminal
+title: Set My Awsome Terminal
 tags: Linux
 
 ---
