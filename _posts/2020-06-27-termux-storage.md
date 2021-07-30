@@ -14,7 +14,7 @@ Why did ``` termux keep losing permission ``` even if  ``` termux-setup-storage 
 
 Ref: <https://www.reddit.com/r/termux/comments/o98ulg/keep_losing_permission/>
 
-## 2 ```sshd``` stoped again and again 
+## 2 Termux can't exec daemon serve 
 info:
 * Android 11,  Flyme,  meizu 17 device
 * termux 0.117
@@ -26,14 +26,14 @@ sshd
 #nothing happen
 nmap localhost
 #you won't find 8022 port
-sshd -d
-#It seems good. 8022 port is verfied. But stopping is again once a connecting from ssh client
+adb devices
+#daemon not running and starting again and again
 ```
 
 **Solution**:
 
-* Add **ListenAddress 0.0.0.0:65522**(any port over 6000 seems OK) to _/data/data/com.termux/files/usr/etc/ssh/sshd_config
-* Run **sshd -d** again.
+* Run **sshd -d** 
+* Run **adb nodaemon server**
 
 ## 3 Fail to gem install  Nokogiri 
 **Solution**:
@@ -55,7 +55,7 @@ gem install nokogiri --platform=ruby -- --use-system-libraries
           end
       end
 ```
-## 4 visit from network 
+## 5 visit jekyll serve from network 
 ```
 bundle exec jekyll serve -w --host=0.0.0.0
 ```
