@@ -32,8 +32,9 @@ adb devices
 
 **Solution**:
 
-* Run **sshd -d** 
-* Run **adb nodaemon server**
+* New session
+* Run: **sshd -d** 
+* Run: **adb nodaemon server**
 
 ## 3 Fail to gem install  Nokogiri 
 **Solution**:
