@@ -8,7 +8,7 @@ Memoirs about me, the music and the night. Memoirs about think-ism and practice-
 # Support
 
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+This is based on Jekyll theme.
 
 You can find the source code for Minima at GitHub:
 [jekyll][jekyll-organization] /
