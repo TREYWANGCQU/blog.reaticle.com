@@ -9,7 +9,7 @@ body {
   background: linear-gradient(90deg, rgba(0,83,83,1) 0%, rgba(0,139,139,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#005353",endColorstr="#008b8b",GradientType=1);
   padding:50px;
-  font: 15px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 15px/1.5 "Noto Sans", Arial,"Microsoft YaHei","微软雅黑", sans-serif;
   color:#0e0e0e;
   font-weight:400;
   
@@ -87,12 +87,13 @@ blockquote {
 }
 
 blockquote:lang(cn) {
-	font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,"LiSHU-WEB", "微软雅黑","Microsoft YaHei", sans-serif;
+	font-family: "Hack", "YangRenDongZhuShiTi","STXihei","华文细黑", sans-serif;
 	font-style:normal;
+  font-style: 18px;
 }
 
 code, pre {
-  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, "LiSHU-WEB","微软雅黑","Microsoft YaHei";
+  font-family:"Hack","STXihei","华文细黑",sans-serif;
   color:#333;
 }
 
@@ -193,15 +194,14 @@ footer {
  * post list
  */
 
- .post:lang(cn) em{
+ em:lang(cn){
   
-  font-family:  "Noto Sans", "Helvetica Neue", Helvetica, Arial,"LiSHU-WEB", "微软雅黑","Microsoft YaHei", sans-serif;
+  font-family:  "Noto Sans","YangRenDongZhuShiTi","STXihei","华文细黑", sans-serif;
   font-style: normal;
-  font-size: 17px;
   }
 
   .language-plaintext{
-    font-family:  "Noto Sans", "Helvetica Neue", Helvetica, Arial, "微软雅黑","Microsoft YaHei", sans-serif;
+    
     padding: 0 5px 0 5px;
     background: #d2cfcf;
   }

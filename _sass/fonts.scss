@@ -54,10 +54,43 @@
        url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.svg#NotoSans') format('svg');
 }
 @font-face {
-  font-family: 'LiSHU-WEB';
+  font-family: 'YangRenDongZhuShiTi';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/LiSHU-WEB.ttf') format('truetype');
-       
+  src: url('../fonts/YangRenDongZhuShiTi.eot');
+  src:
+    url('../fonts/YangRenDongZhuShiTi.eot?#font-spider') format('embedded-opentype'),
+    url('../fonts/YangRenDongZhuShiTi.woff2') format('woff2'),
+    url('../fonts/YangRenDongZhuShiTi.woff') format('woff'),
+    url('../fonts/YangRenDongZhuShiTi.ttf') format('truetype'),
+    url('../fonts/YangRenDongZhuShiTi.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Hack';
+  src: url('../fonts/Hack-Italic.eot');
+  src:
+    url('../fonts/Hack-Italic.eot?#font-spider') format('embedded-opentype'),
+    url('../fonts/Hack-Italic.woff2') format('woff2'),
+    url('../fonts/Hack-Italic.woff') format('woff'),
+    url('../fonts/Hack-Italic.ttf') format('truetype'),
+    url('../fonts/Hack-Italic.svg') format('svg');
+
+  font-weight: normal;
+  font-style: italic;
+  
+}
+@font-face {
+  font-family: 'Hack';
+  src: url('../fonts/Hack-Regular.eot');
+  src:
+    url('../fonts/Hack-Regular.eot?#font-spider') format('embedded-opentype'),
+    url('../fonts/Hack-Regular.woff2') format('woff2'),
+    url('../fonts/Hack-Regular.woff') format('woff'),
+    url('../fonts/Hack-Regular.ttf') format('truetype'),
+    url('../fonts/Hack-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
   
 }
