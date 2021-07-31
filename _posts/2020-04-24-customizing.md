@@ -8,7 +8,13 @@ tags: github web UI
 
 ---
 
-#
+# 从基础的fork开始
+网络的随机教程要辩证来对待，由于 _代码版本_ 和 _运行环境_ 不同，同样的操纵得到不一样的结果是完全有可能产生的。
+因为，减少麻烦和困扰最好的要从官方文档开始，
+* Github-page开通与初始化在[这里]()
+* jekyll的各种api在[这里]（）
+* 从基础的主分支(如[minimal](https://github.com/pages-themes/minimal)主题)fork下来，减少重复造轮子
+* 开始你的style
 
 ### 参考资料
 
