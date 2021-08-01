@@ -10,16 +10,16 @@ tags: github web UI
 
 # 从基础的fork开始
 网络的随机教程要辩证来对待，由于 _代码版本_ 和 _运行环境_ 不同，同样的操纵得到不一样的结果是完全有可能产生的。
-因为，减少麻烦和困扰最好的要从官方文档开始，
+因此，减少麻烦和困扰最好的要从官方文档开始，
 * Github-page开通与初始化在[这里](https://docs.github.com/en/pages)
-* jekyll的各种api在[这里]（https://jekyllrb.com/docs/）
+* jekyll的各种api在[这里](https://jekyllrb.com/docs/）
 * 从基础的主分支(如[minimal](https://github.com/pages-themes/minimal)主题)fork下来，减少重复造轮子
 * 开始你的style
   
 # 酷酷的UI设计资源
 
 * 免费开源的图标库如[Eva Icons](https://github.com/akveo/eva-icons)、[Material design icons](https://github.com/google/material-design-icons)、[Ionicons](https://github.com/ionic-team/ionicons)。但是图标越多，加载越慢
-* 推荐[iconfont](https://github.com/fontello/fontello), 阿里巴巴[iconfont](https://www.iconfont.cn/)作图标自定义库管理
+* 推荐[iconfont](https://github.com/fontello/fontello)或者是阿里巴巴[iconfont](https://www.iconfont.cn/)作图标自定义库管理
 * [animate.css](https://github.com/animate-css/animate.css)
 * [hover.css](https://github.com/IanLunn/Hover)
 * [Bootstrap](https://github.com/twbs/bootstrap)

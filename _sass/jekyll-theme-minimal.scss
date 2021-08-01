@@ -150,23 +150,19 @@ header {
   position:fixed;
   -webkit-font-smoothing:subpixel-antialiased;
 }
-header img {
-  width: 200px;
+.head-logo{
+  font-size:120px;
+  line-height:200px;
 }
 
 
 section {
   width:810px;
-  height: 600px;
   padding:20px;
   margin-left: 350px;
   margin-bottom:50px;
   border-radius:5px;
-  background: rgb(255,255,255);
-  background: -moz-linear-gradient(90deg, rgba(255,255,255,0.8519782913165266) 0%, rgba(232,232,232,1) 100%);
-  background: -webkit-linear-gradient(90deg, rgba(255,255,255,0.8519782913165266) 0%, rgba(232,232,232,1) 100%);
-  background: linear-gradient(90deg, rgba(255,255,255,0.8519782913165266) 0%, rgba(232,232,232,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e8e8e8",GradientType=1);
+  background:#dfdbdb;
   
 }
 

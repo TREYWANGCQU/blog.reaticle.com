@@ -1,10 +1,9 @@
 <header >
        
         
-        {% if site.logo %}
-        <a href="{{ "/" | absolute_url }}" class="hvr-grow-rotate"> <img src="{{site.logo | relative_url}}" alt="Logo" />
-        {% endif %}
-         <h1>{{ site.title | default: site.github.repository_name }}</a></h1>
+
+	<a href="{{ "/" | absolute_url }}" class="head-logo hvr-grow-rotate"><i class="iconfont icon-YWANG-LOGO"></i></a>
+         
         <p class="hvr-grow">{{ site.description | default: site.github.project_tagline }}</p>
      
       <nav class="site-nav">
