@@ -4,8 +4,6 @@ description: Memoirs about me, the music and the night. Memoirs about think-ism 
 show_downloads: false
 google_analytics:
 
-github_username:  treywangcqu
-twitter_username: treywangcqu
 author: Y.WANG
 email: treywangcqu@gmail.com
 
@@ -20,5 +18,5 @@ highlighter:      rouge
 
 
 
-paginate: 7
+paginate: 6
 paginate_path: "/blog/page:num/"

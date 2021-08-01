@@ -18,10 +18,11 @@ tags: github web UI
   
 # 酷酷的UI设计资源
 
-* [fontawesome.css](https://fontawesome.com/v6.0/icons?d=gallery&p=1&q=negative&s=solid&m=free)
-* [animate.css](https://animate.style/)
-* [hover.css](http://ianlunn.github.io/Hover/)
-* [Bootstrap](https://getbootstrap.com/docs/5.0/layout/grid/)
+* 免费开源的图标库如[Eva Icons](https://github.com/akveo/eva-icons)、[Material design icons](https://github.com/google/material-design-icons)、[Ionicons](https://github.com/ionic-team/ionicons)。但是图标越多，加载越慢
+* 推荐[iconfont](https://github.com/fontello/fontello), 阿里巴巴[iconfont](https://www.iconfont.cn/)作图标自定义库管理
+* [animate.css](https://github.com/animate-css/animate.css)
+* [hover.css](https://github.com/IanLunn/Hover)
+* [Bootstrap](https://github.com/twbs/bootstrap)
 
 # 关于字体
 授权说明要注意

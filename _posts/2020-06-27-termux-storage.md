@@ -46,7 +46,7 @@ gem install nokogiri --platform=ruby -- --use-system-libraries
 ## 4 Permission denied to get **/proc/version** when run " bundle exec jekyll serve"
 **Solution**:
 * Ignore permission error of /proc/version, see [here](https://github.com/jekyll/jekyll/pull/7267)
-* bundle ```bundle show jekyll``` to find the file named ``` jekyll--.-.-(version)/lib/jekyll/utils/platform.rb``` 
+* bundle ```bundle show jekyll``` to find the file named *jekyll(version)/lib/jekyll/utils/platform.rb*
 ```ruby
      @proc_version ||=
           begin
@@ -59,6 +59,6 @@ gem install nokogiri --platform=ruby -- --use-system-libraries
 
 ## 5 visit jekyll serve from network
 
-```
+```ssh
 bundle exec jekyll serve -w --host=0.0.0.0
 ```

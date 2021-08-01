@@ -84,13 +84,14 @@ blockquote {
   margin:0;
   padding:0 0 0 20px;
   font-style:italic;
+  font-size:18px;
 }
 
 blockquote:lang(cn) {
 	font-family: "Hack", "YangRenDongZhuShiTi","STXihei","华文细黑", sans-serif;
 	font-style:normal;
-  font-style: 18px;
 }
+
 
 code, pre {
   font-family:"Hack","STXihei","华文细黑",sans-serif;
@@ -156,7 +157,7 @@ header img {
 
 section {
   width:810px;
-  
+  height: 600px;
   padding:20px;
   margin-left: 350px;
   margin-bottom:50px;
@@ -188,8 +189,14 @@ footer {
   bottom:50px;
   -webkit-font-smoothing:subpixel-antialiased;
 }
-
-
+.iconfont{
+  font-size: 100%!important;
+}
+.social_icon a{
+  font-size: 23px;
+  padding-right:12px ;
+  line-height: 30px;
+}
 /**
  * post list
  */
@@ -319,6 +326,7 @@ a.cusInnerPage:hover{
   }
   section {
     margin:auto;
+    height: auto;
   }
 
 }
@@ -340,6 +348,7 @@ a.cusInnerPage:hover{
     border-width:1px 0;
     padding:10px;
     margin:0 0 20px;
+    height: auto;
   }
 
   header a small {

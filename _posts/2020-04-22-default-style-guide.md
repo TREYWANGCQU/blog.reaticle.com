@@ -6,13 +6,13 @@ author: <a href="https://github.com/jekyll/minima" >jekyll/minima</a>
 tags: github web UI
 ---
 
-Text can be **bold**, _italic_, ```highlight```.
+Text can be **bold**, _italic_, ```highlight```, and ~~delete~~.
 
 
 
 There should be whitespace between paragraphs.
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+>There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
 Eqation
 $$ a^2+b^2=c^2 $$

@@ -1,12 +1,12 @@
 nav_home:
-- title: <i class="fas fa-house-user"></i>&nbsp;Home
+- title: <i class="iconfont icon-home"></i>&nbsp;Home
   url: /index
 
-- title: <i class="fas fa-blog"></i>&nbsp;Blog
+- title: <i class="iconfont icon-pen-nib-fill"></i>&nbsp;Blog
   url: /blog/
 
-- title: <i class="fas fa-tags"></i>&nbsp;Tags
+- title: <i class="iconfont icon-book-open"></i>&nbsp;Tags
   url: /tags/
   
-- title: <i class="fas fa-info-circle"></i>&nbsp;About
+- title: <i class="iconfont icon-lightbulb-flash-fill"></i>&nbsp;About
   url: /about/
