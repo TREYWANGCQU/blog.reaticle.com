@@ -4,6 +4,7 @@ layout: post
 title: Default style guide
 author: <a href="https://github.com/jekyll/minima" >jekyll/minima</a>
 tags: github web UI
+mathjax: true
 ---
 
 Text can be **bold**, _italic_, ```highlight```, and ~~delete~~.
@@ -15,7 +16,9 @@ There should be whitespace between paragraphs.
 >There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
 Eqation
+
 $$ a^2+b^2=c^2 $$
+
 # 1. Header 1
 
 This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.

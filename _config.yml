@@ -1,12 +1,11 @@
 title: Y.WANG
-logo: /assets/img/logo3.png
 description: Memoirs about me, the music and the night. Memoirs about think-ism and practice-ism.
 show_downloads: false
 google_analytics:
 
 author: Y.WANG
-email: treywangcqu@gmail.com
-
+email: y.wang@reaticle.com
+iconfont_url: https://at.alicdn.com/t/font_2714580_eqcgguazg7q.css
 plugins:
   - jekyll-feed
   - jekyll-sitemap

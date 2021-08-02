@@ -2,9 +2,7 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   {% include head.html %}
 <body>
-<div class='spinner-wrapper'>
-    <div class="spinner"><img src="/assets/img/preloader.gif"/></div>
-</div>
+
     <div class="wrapper">
      {%  include header.html %}
       <section class="animate__animated animate__fadeInUp">
@@ -16,13 +14,7 @@
     </div>
     
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-    <script>
-    let spinnerWrapper = document.querySelector('.spinner-wrapper');
-
-    window.addEventListener('load', function () {
-         //spinnerWrapper.style.display = 'none';
-        spinnerWrapper.parentElement.removeChild(spinnerWrapper);
-    });
+    
 </script>
     {% if site.google_analytics %}
     <script>
@@ -34,5 +26,11 @@
       ga('send', 'pageview');
     </script>
     {% endif %}
+    {% if page.mathjax %}
+    <!-- MathJax -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      </script>
+    {% endif %}
+</script>
   </body>
 </html>
