@@ -41,7 +41,18 @@ More doc is [here](https://github.com/ohmyzsh/ohmyzsh)
 
 The powerline font is [here](https://github.com/powerline/fonts)
 
-And the fluentTerminal is [here](https://github.com/felixse/FluentTerminal)
+The fluentTerminal is [here](https://github.com/felixse/FluentTerminal)
+
+The main steps in windows are as [following](https://lemmusm.medium.com/cool-windows-terminal-with-oh-my-zsh-8d2c1c759805):
+
+* Install WSL (Windows Subsystem for Linux) 
+```shell
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+```
+* Install Ubuntu for subsystem of windows
+* Install Fluent Terminal
+* Install Oh My ZSH
+
 ### helpful plugins
 * zsh-autosuggestions->[LINK](https://github.com/zsh-users/zsh-autosuggestions)
 * zsh-syntax-highlighting->[LINK](https://github.com/zsh-users/zsh-syntax-highlighting)
