@@ -11,8 +11,6 @@ title: Home
 
 By [Emily Osterloff](https://www.nhm.ac.uk/discover/what-is-ambergris.html)
 
-<iframe width="100%" height="150" src="http://www.rainymood.com/" title="Rainy Mood" scrolling="no" frameborder="0"></iframe>
-
 Ambergris has been a unique phenomenon for millennia. Fossilised evidence of the substance dates back 1.75 million years, and it is likely that humans have been using it for more than 1,000 years. It has been called the treasure of the sea and floating gold.Where it comes from remained a mystery for years, during which several theories were proposed, including that it was hardened sea foam or the droppings of large birds. However, it was not until large-scale whaling began in the 1800s that the identity of its sole producer, the sperm whale _(Physeter macrocephalus)_, was uncovered.Sperm whales eat large quantities of cephalopods such as squid and cuttlefish. In most cases the indigestible elements of their prey, such as the beaks and pens, are vomited out before digestion.
 
 But in rare circumstances these parts move into the whale's intestines and bind together. They slowly become a solid mass of ambergris, growing inside the whale over many years.It is thought that ambergris protects the whale's internal organs from the sharp squid beaks.

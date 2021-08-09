@@ -46,6 +46,7 @@ The fluentTerminal is [here](https://github.com/felixse/FluentTerminal)
 The main steps in windows are as [following](https://lemmusm.medium.com/cool-windows-terminal-with-oh-my-zsh-8d2c1c759805):
 
 * Install WSL (Windows Subsystem for Linux) 
+  
 ```shell
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
