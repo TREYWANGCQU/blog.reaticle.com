@@ -17,5 +17,5 @@ highlighter:      rouge
 
 
 
-paginate: 2
+paginate: 6
 paginate_path: "/blog/page:num/"
