@@ -27,10 +27,9 @@ chsh -s /bin/zsh
 export -p 
 #proxy
 
-
 proxy_http=username:password@proxy-host:port
 export https_proxy=user:pass@my.proxy.server:port
-
+curl -v -x socks5://IP:port
 
 #export is not working when using curl. You can add -c like
 sh -c "$(curl -c HTTP_PROXY=user:pass@my.proxy.server:port https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
