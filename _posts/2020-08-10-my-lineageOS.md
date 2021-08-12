@@ -1,17 +1,9 @@
 ---
 layout: post
 title: 编译专属LineageOS
-tags: Github
+tags: Linux Android
 
 ---
-## 1. 简介
-帅气的rime的简介请看[官网](https://rime.im/)
-
-windows平台中叫[小狼毫/weasel](https://github.com/rime/weasel)
-
-android平台中叫[同文/trime](https://github.com/osfans/trime)
-
-我的自定义详见[这里](https://github.com/TREYWANGCQU/rime-pure)，以下记录一些tips.
 
 ## 2. 一些tips
 
@@ -29,17 +21,17 @@ sleep 3
 ~/bin/repo sync -j4 --no-clone-bundle
 done
 EOF
-
 ```
 尽快修改国内镜像源，[清华大学源](https://mirrors.tuna.tsinghua.edu.cn/help/lineageOS/)，操作已经有了```大的变化```：
 - 把[default.xml](https://github.com/LineageOS/android)fork到[自己](https://github.com/TREYWANGCQU/android)目录做清华源对应修改
 - 修改.repo/manifests.git/config下```origin```地址
+
 ```html
     [remote "origin"]
         url = https://github.com/TREYWANGCQU/android
-
 ```
-愉快地```repo sync```
+
+- 终于愉快地```repo sync```命令了
 
 
 ### 2.2. 提取手机厂商vendor信息（硬件不同，驱动不动）
@@ -52,7 +44,7 @@ EOF
 
 Block-based OTA的提取步骤
 
-基本根据在```system.transfer.list```，没有些文件需要额外步骤
+基本根据在```system.transfer.list```，没有些文件需要额外[步骤](https://wiki.lineageos.org/extracting_blobs_from_zips.html)
 
 Create a temporary directory and move there:
 ```shell
