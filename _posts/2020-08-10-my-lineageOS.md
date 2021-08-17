@@ -55,13 +55,22 @@ cd android/system_dump/
 Extract system.transfer.list and system.new.dat(有遇到后缀是.dat.br需要 brotli，详见[说明](https://wiki.lineageos.org/extracting_blobs_from_zips.html)):
 ```shell
 unzip path/to/device-*.zip system.transfer.list system.new.dat
-```
+```z
 用sdat2img打包镜像并挂载
 ```shell
 git clone https://github.com/xpirt/sdat2img
 python sdat2img/sdat2img.py system.transfer.list system.new.dat system.img
 mkdir system/
 sudo mount system.img system/
+```
+
+## 2.2 Recovery img
+
+fastboot ```drivers``` !!! 
+```shell
+adb reboot bootloader # 进入fastboot模式
+fastboot devices #注意需要正确的驱动
+
 ```
 
 
