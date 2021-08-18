@@ -77,10 +77,13 @@ Create a symbol soft link to Termux directory
 sh -s /system/xbin/lu.me.haha.reaticle /data/data/com.termux/files/usr/bin su
 ```
 
+
 ### 3.6. The results
 
 ![Termux_system](/assets/img/termux_system.png)
+am start -a android.intent.action.MAIN -n com.android.settings/com.meizu.settings.root.FlymeRootRequestActivity --ei uid 10192 --ei pid 13525 > /dev/null
 
+I found the secret...
 
 ## Comments
 
