@@ -31,6 +31,13 @@ EOF
         url = https://github.com/TREYWANGCQU/android
 ```
 
+或者更简单地,repo修改为
+```shell
+repo init -u git://github.com/TREYWANGCQU/android.git -b lineage-18.1
+repo sync
+repo sync -c -j8 --force-sync --no-clone-bundle
+```
+
 - 终于愉快地```repo sync```命令了
 
 
