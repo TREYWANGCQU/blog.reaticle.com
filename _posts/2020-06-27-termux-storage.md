@@ -35,6 +35,7 @@ adb devices
 * New session
 * Run: **sshd -D -e** 
 * Run: **adb nodaemon server**
+* Run: **crond -f**
 * Run in background by using [nohup](https://github.com/termux/termux-app/issues/2015)
 
 ## 3 Fail to gem install  Nokogiri 

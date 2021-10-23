@@ -11,3 +11,9 @@ tags: Blender-Reacle
 * Check your system language. 
 * Change the language to English.
 * The reason is that wrong compilings may be occurred when facing **non-unicode** codes.
+
+# Drivers! Drivers!
+
+Bios! UEFI boot! VGA drivers!
+
+Download them from **vendors'** main sites **straightforward**! 
