@@ -1,6 +1,6 @@
 ---
 layout: tagpage
-title: "Tag: github"
-tag: github
+title: "Tag: openwrt"
+tag: openwrt
 robots: noindex
 ---
