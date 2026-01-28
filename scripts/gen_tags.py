@@ -35,7 +35,10 @@ for fname in os.listdir(POST_DIR):
             # 提取 front matter
             front_matter = content.split("---", 2)[1]
             meta = yaml.safe_load(front_matter)
-            for t in meta.get("tags", []):
+            raw_tags = meta.get("tags", [])
+            if isinstance(raw_tags, str):
+                raw_tags = [raw_tags]
+            for t in raw_tags:
                 tags.add(t.strip())
 
 # -----------------------------------

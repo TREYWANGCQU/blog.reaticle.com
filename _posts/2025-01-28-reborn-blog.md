@@ -14,7 +14,7 @@ mathjax: true
 
 这次重启博客，给也一个朴素的目标：
 
-> **让博客系统退到后台，让注意力只给思考本身。**
+> 让博客系统退到后台，让注意力只给思考本身。
 
 ## 一、为什么要重构博客流程
 
@@ -105,61 +105,78 @@ git push
 ``` yaml
 on:
   push:
+    branches: [mine]  # 或你的默认分支
   pull_request:
     types: [opened, synchronize]
+
+# 添加权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: script/cibuild
-
     steps:
       # 1️⃣ 拉代码
-      - uses: actions/checkout@v2
-
+      - uses: actions/checkout@v4
+      
       # 2️⃣ Ruby（Jekyll）
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.2
           bundler-cache: true
-
+      
       # 3️⃣ Python（tag + 字体）
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
+      
       - name: Install Python deps
         run: |
           pip install fonttools pyyaml brotli
-
+      
       # 4️⃣ 生成 tag 页面（在 Jekyll build 前）
       - name: Generate tag pages
         run: |
           python scripts/gen_tags.py
-
-      # 5️⃣ Jekyll 官方构建（你原有逻辑）
-      - name: build
-        run: script/bootstrap
-
+      
+      # 5️⃣ Jekyll 构建
+      - name: Build with Jekyll
+        run: bundle exec jekyll build
+      
       # 6️⃣ 字体子集化（HTML 已生成）
       - name: Subset Chinese font
         run: |
-          find . -name "*.html" -print0 \
+          find _site -name "*.html" -print0 \
             | xargs -0 cat \
             | sed 's/<[^>]*>//g' \
             | tr -d '\n' \
             | sort -u \
             > all-text.txt
-
           pyftsubset assets/fonts/fontSource/YangRenDongZhuShiTi.ttf \
             --text-file=all-text.txt \
-            --output-file=assets/fonts/YangRenDongZhuShiTi.woff2 \
+            --output-file=_site/assets/fonts/YangRenDongZhuShiTi.woff2 \
             --flavor=woff2 \
             --layout-features='*' \
             --with-zopfli
+      
+      # 7️⃣ 上传构建产物
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
 
-      # 7️⃣ 测试 / 部署（你原有逻辑）
-      - name: test
-        run: script/cibuild
+  # 部署任务
+  deploy:
+    if: github.ref == 'refs/heads/mine'  # 只在主分支部署
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 ```
