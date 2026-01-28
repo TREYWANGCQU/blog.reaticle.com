@@ -26,7 +26,7 @@ jobs:
 
       - name: Install Python deps
         run: |
-          pip install fonttools pyyaml
+          pip install fonttools pyyaml brotli
 
       # 4️⃣ 生成 tag 页面（在 Jekyll build 前）
       - name: Generate tag pages
@@ -54,6 +54,6 @@ jobs:
             --layout-features='*' \
             --with-zopfli
 
-      # 7️⃣ 测试 / 部署（你原有逻辑）
+      # 7️⃣ 测试 / 部署
       - name: test
         run: script/cibuild

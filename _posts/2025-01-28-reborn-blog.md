@@ -79,7 +79,7 @@ git push
 这些生成的 tag 页面本质上是普通 Markdown 文件，Jekyll 可以直接渲染，无需任何插件支持。
 
 
-## 四、这次重构带来的一个核心启示
+## 四、启示
 
 这次调整过程中，逐渐形成了一个清晰的认识：
 
@@ -101,7 +101,7 @@ git push
 
 > 2 其余工作，交给自动化即可。
 
-### GitHub Actions 工作流
+### 附件：GitHub Actions 工作流
 ``` yaml
 on:
   push:
@@ -131,7 +131,7 @@ jobs:
 
       - name: Install Python deps
         run: |
-          pip install fonttools pyyaml
+          pip install fonttools pyyaml brotli
 
       # 4️⃣ 生成 tag 页面（在 Jekyll build 前）
       - name: Generate tag pages
