@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Build termux as a system app for your phone
-tags: Linux Android
+tags: [Linux, Android]
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Anti-recommendding
-tags: Linux Android
+tags: [Linux, Android]
 
 ---
 

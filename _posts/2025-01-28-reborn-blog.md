@@ -4,7 +4,7 @@ layout: post
 lang: cn
 title: 重启自动化博客：把精力只交给思考
 date: 2026-01-28
-tags: github AI
+tags: [github, AI]
 mathjax: true
 
 
