@@ -1,34 +1,78 @@
 ---
 layout: default
 title: Home
-
+date: 2026-01-28
+mathjax: true
 
 ---
 
 
+# 现在可“解封”的致谢
 
-# What is ambergris?
 
-By [Emily Osterloff](https://www.nhm.ac.uk/discover/what-is-ambergris.html)
+## $$致\quad  谢$$
 
-Ambergris has been a unique phenomenon for millennia. Fossilised evidence of the substance dates back 1.75 million years, and it is likely that humans have been using it for more than 1,000 years. It has been called the treasure of the sea and floating gold.Where it comes from remained a mystery for years, during which several theories were proposed, including that it was hardened sea foam or the droppings of large birds. However, it was not until large-scale whaling began in the 1800s that the identity of its sole producer, the sperm whale _(Physeter macrocephalus)_, was uncovered.Sperm whales eat large quantities of cephalopods such as squid and cuttlefish. In most cases the indigestible elements of their prey, such as the beaks and pens, are vomited out before digestion.
+### 0 楔子
+>于是余有叹焉。古人之观于天地、山川、草木、虫鱼、鸟兽，往往有得，以其求思之深而无不在也。夫夷以近，则游者众；险以远，则至者少。而世之奇伟、瑰怪，非常之观，常在于险远，而人之所罕至焉，故非有志者不能至也。有志矣，不随以止也，然力不足者，亦不能至也。有志与力，而又不随以怠，至于幽暗昏惑而无物以相之，亦不能至也。然力足以至焉，于人为可讥，而在己为有悔；尽吾志也而不能至者，可以无悔矣，其孰能讥之乎？
 
-But in rare circumstances these parts move into the whale's intestines and bind together. They slowly become a solid mass of ambergris, growing inside the whale over many years.It is thought that ambergris protects the whale's internal organs from the sharp squid beaks.
-There are conflicting opinions as to how ambergris emerges from the whale. Some believe that the whale regurgitates the mass, earning it its well-known nickname 'whale vomit'. Richard Sabin, Curator of Marine Mammals at the Museum, believes differently.
+以上的楔子来自于北宋时期政治家、文学家、思想家、改革家王安石收录在《临川先生集》中的一篇散文，名为《游褒禅山记》。初识还是青葱小生，再感已是年近而立。许多感念，连同我的致谢，一并记述于此。
+于是余有叹焉。
+### 1 拥“火”以入
+王安石在 **《游褒禅山记》** 一文中总结到，在有限的人生中要成就一番事业，需要三个关键条件：志，力，物。“志”是意志、志向，其最大的特点在于“不随以怠”，不受他人轻视、打击而懈怠放弃，坚韧并且顽强；“力”是体力、智力、执行能力，没有健康的体魄，足够解决的问题的能力和时刻行动起来的执行力，大“志”就会变成空泛的口号，最终只会被迫懈怠；而“物”呢？“物”是短时间内不随人意志改变的外在条件，是时也、运也，如王安石与朋友们进入深洞，探索险远而必需的火把。
 
-[![Sperm wales](/assets/img/spermwhale.jpg)](https://www.youtube.com/watch?v=7V0uMY6pd3Y)
- <https://commons.wikimedia.org/wiki/File%3ASperm_whale_pod.jpg>
+- “志”，是不断塑造的，
+- “力”，是不断磨砺的，
+- 而“物”呢？
 
-He says, 'Based upon recent discussion with colleagues around the world, I lean towards the theory that ambergris forms in the intestines and passes along with faecal matter, forming an obstruction in the rectum.'
+在这个六年期的博士生涯里，家庭、团队、学校、国家无不为我创造了一个良好的外在条件：使我能北抵乌兰布和的大漠黄沙，南行三沙群岛的碧海蓝天，探索脚底的砂与土，即使远隔天涯也存在着广泛的科学联系；使我能东临南京上海，西至艾哈迈达巴德，聆听学者们的雄才激辩、畅游思维碰撞的海洋；使我能坐在宽敞的办公室、窗明几净，下笔有神。
+本文的研究工作是在我的导师的精心指导和悉心关怀下完成的，在我的学业和论文的研究工作中无不倾注着刘\**教授、肖\**教授辛勤的汗水和心血。导师们严谨治学的态度、渊博的知识、无私奉献的精神无不成为耀眼、温暖的“火把”，照亮了我在科学研究的“深洞”中前行的道路。在此，我首先要向我的导师致以最衷心的感谢和深深的敬意。
+感谢我尊敬的导师、前辈们，他们还有，
 
-Some think the whale will pass the mass, whereas others believe the obstruction grows so large it eventually fatally ruptures the whale's rectum.
+丁\**教授、仉\**教授、方\**教授、周\**研究员、陈\**副教授、张\**副教授、唐\**秘书；
 
-Sperm whales live all over the world, meaning deposits of ambergris could be found floating on any ocean or washed up on most shorelines.
+王\**博士后、蒋\**博士后、顾\**博士后、王\**博士后、吴\**博士后、史\**博士后；
 
-But it is uncommon, found in less than 5% of whale carcasses.
+Cha\**i教授、Hoss\**ga教授、Ji\**hu教授、T. \**ans教授、We\**u教授、Mus\**an教授、Da\**en教授。
 
-It is thought that pygmy (Kogia breviceps) and dwarf (Kogia sima) sperm whales produce the substance in smaller amounts, as they too have cephalopod-rich diets.
+### 2 “幽暗昏惑”之时
+前进的道路总是会有“幽暗昏惑”的阶段，感谢那些与我“执火”同行的朋友们。与他们同行，科研生活不是孤独的、不是单打独斗的。抬抬头、回回首，他们奋斗的身影、过往的经历总能激励着我，让我整理好行装，继续前行。
 
+感谢我尊敬的同辈们，他们是，
+
+刘\** 、刘\** 、向\** 、王\** 、肖\**博士；
+
+孟\** 、高\** 、何\** 、章\** 、吴\** 、陈\**博士；
+
+王\** 、孙\** 、汪\** 、陈\** 、马\** 、崔\** 、周\** 、赵\**博士；
+
+田\** 、徐\** 、冉\** 、马\** 、查\** 、向\** 、胡\**硕士；
+
+南\** 、周\** 、袁\** 、龙\** 、陈\** 、傅\** 、周\** 、王\**和杨\**硕士；
+
+格\** 、潘\** 、陈\** 、吕\** 、殷\** 硕士；
+
+许\** 、杨\** 博士；
+
+杨\** 、王\** 硕士。
+
+### 3 愚公移山
+近六年的科研训练与磨砺中，我越发地赞同“愚公移山”的品质，科学问题的突破无不是先从山脚下一粒土、一块石的移动开始；没有“埋头苦干”、“拼命硬干”的意志、体力和能力，只会成为望山兴叹或不知有山的局外人。虽然山不加增，成为“愚公”也会遇到许多烦恼：如何证明自己的方向是对、是有意义的呢？如何应对“智叟”先生正确或错误的辩论呢？如何去劝服“子子孙孙”“无穷匮”也呢？如何才能“感动”“天神”呢？但是，科学的东西，总是能越辩越明的吧，随便什么时候都可以不怕人家的批评。必须要尽快行动起来。回望在重庆大学求学的十年里，“博士”阶段与“本科”阶段，对我而言，有何差异？本科阶段的四年里，一如小学中学阶段的十余年，可以在每一门学科都付出必要充足的准备，以面对范围已知、答案固定、分数有限的试卷；而“博士”阶段是不同的：不能等一切都准备好了才开始行动起来，也不能不断地将预期目标无限提高。人生有多少个十年？下一个十年里，必须要尽快行动起来，有理、有利、有节。
+
+至此，我的“博士”生涯也来到了尾声；尽吾志否？尽吾力否？火且尽矣；但科学问题仍在继续。致谢！无尽的远方与无数的人们；后来者们继续执火以入，希望我的工作也能为其“火把”上添加绵薄的“燃料”吧；其进愈深，其见愈奇。
+
+最后，向所有关心和帮助过我的领导、老师、同学和朋友表示由衷的谢意！
+
+衷心地感谢在百忙之中评阅论文和参加答辩的各位专家、教授！   
+
+
+<br />
+
+<br />
+<br />
+<br />
+
+汪 杨        
+二O二二年四月 于重庆•白鹤岭
 
 
 

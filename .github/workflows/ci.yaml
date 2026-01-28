@@ -2,17 +2,58 @@ on:
   push:
   pull_request:
     types: [opened, synchronize]
+
 jobs:
   build:
     runs-on: ubuntu-latest
     name: script/cibuild
+
     steps:
+      # 1️⃣ 拉代码
       - uses: actions/checkout@v2
+
+      # 2️⃣ Ruby（Jekyll）
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.2
           bundler-cache: true
+
+      # 3️⃣ Python（tag + 字体）
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python deps
+        run: |
+          pip install fonttools pyyaml
+
+      # 4️⃣ 生成 tag 页面（在 Jekyll build 前）
+      - name: Generate tag pages
+        run: |
+          python scripts/gen_tags.py
+
+      # 5️⃣ Jekyll 官方构建（你原有逻辑）
       - name: build
         run: script/bootstrap
+
+      # 6️⃣ 字体子集化（HTML 已生成）
+      - name: Subset Chinese font
+        run: |
+          find . -name "*.html" -print0 \
+            | xargs -0 cat \
+            | sed 's/<[^>]*>//g' \
+            | tr -d '\n' \
+            | sort -u \
+            > all-text.txt
+
+          pyftsubset assets/fonts/fontSource/YangRenDongZhuShiTi.ttf \
+            --text-file=all-text.txt \
+            --output-file=assets/fonts/YangRenDongZhuShiTi.woff2 \
+            --flavor=woff2 \
+            --layout-features='*' \
+            --with-zopfli
+
+      # 7️⃣ 测试 / 部署（你原有逻辑）
       - name: test
         run: script/cibuild

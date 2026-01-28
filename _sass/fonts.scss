@@ -57,13 +57,7 @@
   font-family: 'YangRenDongZhuShiTi';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/YangRenDongZhuShiTi.eot');
-  src:
-    url('../fonts/YangRenDongZhuShiTi.eot?#font-spider') format('embedded-opentype'),
-    url('../fonts/YangRenDongZhuShiTi.woff2') format('woff2'),
-    url('../fonts/YangRenDongZhuShiTi.woff') format('woff'),
-    url('../fonts/YangRenDongZhuShiTi.ttf') format('truetype'),
-    url('../fonts/YangRenDongZhuShiTi.svg') format('svg');
+  src: url('../fonts/YangRenDongZhuShiTi.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -71,7 +65,6 @@
   font-family: 'Hack';
   src: url('../fonts/Hack-Italic.eot');
   src:
-    url('../fonts/Hack-Italic.eot?#font-spider') format('embedded-opentype'),
     url('../fonts/Hack-Italic.woff2') format('woff2'),
     url('../fonts/Hack-Italic.woff') format('woff'),
     url('../fonts/Hack-Italic.ttf') format('truetype'),
@@ -85,7 +78,6 @@
   font-family: 'Hack';
   src: url('../fonts/Hack-Regular.eot');
   src:
-    url('../fonts/Hack-Regular.eot?#font-spider') format('embedded-opentype'),
     url('../fonts/Hack-Regular.woff2') format('woff2'),
     url('../fonts/Hack-Regular.woff') format('woff'),
     url('../fonts/Hack-Regular.ttf') format('truetype'),

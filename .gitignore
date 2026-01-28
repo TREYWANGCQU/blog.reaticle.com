@@ -3,3 +3,5 @@ _site
 Gemfile.lock
 *.gem
 .jekyll-cache
+all-text.txt
+assets/fonts/YangRenDongZhuShiTi.woff2
