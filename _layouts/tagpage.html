@@ -2,6 +2,12 @@
 layout: default
 ---
 
+{% comment %}
+========================
+Tag Title
+========================
+{% endcomment %}
+
 {% if page.tag %}
 <h1 class="tag-title">
   <i class="iconfont icon-bookmark-fill"></i>
@@ -10,10 +16,15 @@ layout: default
 <hr>
 {% endif %}
 
+{% comment %}
+========================
+Posts under current tag
+========================
+{% endcomment %}
+
 {% assign tagged_posts = site.tags[page.tag] %}
 
 {% if tagged_posts and tagged_posts.size > 0 %}
-
   {% for post in tagged_posts %}
     <div class="blog-post">
       <div class="post-side-meta">
@@ -22,7 +33,9 @@ layout: default
       </div>
 
       <div class="post-header">
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <h2>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h2>
 
         <span class="meta-tags float-left">
           <i class="iconfont icon-bookmark-fill"></i>
@@ -38,29 +51,32 @@ layout: default
       </div>
     </div>
   {% endfor %}
-
-{% else %}
+{% elsif page.tag %}
   <p>暂无相关文章。</p>
 {% endif %}
 
-<!-- ===== Tag Archive===== -->
+{% comment %}
+========================
+Tag Archive (All tags)
+========================
+{% endcomment %}
 
 <h1><i class="iconfont icon-archive"></i> Archive</h1>
 <hr>
 
 <div class="meta-tags">
+
 {% capture temptags %}
   {% for tag in site.tags %}
-    {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
+    {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}
   {% endfor %}
 {% endcapture %}
 
 {% assign sortedtemptags = temptags | split:' ' | sort | reverse %}
 
 {% for temptag in sortedtemptags %}
-  {% assign tagitems = temptag | split: '#' %}
-  {% capture tagname %}{{ tagitems[1] }}{% endcapture %}
-
+  {% assign tagname = temptag | split:'#' | last %}
   <a href="/tag/{{ tagname | url_encode }}">{{ tagname }}</a>
 {% endfor %}
+
 </div>

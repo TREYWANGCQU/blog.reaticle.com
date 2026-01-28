@@ -1,61 +1,60 @@
-from pathlib import Path
+# gen_tags.py
+import os
 import yaml
 import re
-import shutil
+import unicodedata
 
-POST_DIR = Path("_posts")
-TAG_DIR = Path("tag")
+POST_DIR = "_posts"
+TAG_DIR = "tag"
 
-def slugify(text: str) -> str:
-    """
-    生成 URL / 文件安全的 tag 名
-    中文保留，其他非法字符转 -
-    """
-    text = text.strip()
-    text = re.sub(r"[^\w\u4e00-\u9fff]+", "-", text)
-    return text.strip("-")
+# -----------------------------------
+# slugify 函数：把 tag 转成 URL 友好格式
+# 中文保留原文，空格 -> -
+# 英文、数字小写化
+# 其他特殊字符去掉
+# -----------------------------------
+def slugify(tag):
+    tag = tag.strip()
+    # 替换空格为 -
+    tag = tag.replace(" ", "-")
+    # 去掉大部分特殊字符，只保留中文、字母、数字、-
+    tag = re.sub(r"[^\w\-一-龥]", "", tag)
+    return tag.lower()
 
-# 确保 tag 目录干净
-if TAG_DIR.exists():
-    shutil.rmtree(TAG_DIR)
-TAG_DIR.mkdir(parents=True, exist_ok=True)
+# -----------------------------------
+# 遍历 _posts 收集所有 tag
+# -----------------------------------
+tags = set()
 
-total_tags = set()
-
-for post in POST_DIR.glob("*.md"):
-    with post.open("r", encoding="utf-8") as f:
+for fname in os.listdir(POST_DIR):
+    if not fname.endswith(".md"):
+        continue
+    with open(os.path.join(POST_DIR, fname), "r", encoding="utf-8") as f:
         content = f.read()
+        if content.startswith("---"):
+            # 提取 front matter
+            front_matter = content.split("---", 2)[1]
+            meta = yaml.safe_load(front_matter)
+            for t in meta.get("tags", []):
+                tags.add(t.strip())
 
-    if not content.startswith("---"):
-        continue
+# -----------------------------------
+# 创建 tag 目录
+# -----------------------------------
+os.makedirs(TAG_DIR, exist_ok=True)
 
-    try:
-        _, fm, _ = content.split("---", 2)
-        meta = yaml.safe_load(fm) or {}
-    except Exception:
-        continue
-
-    tags = meta.get("tags", [])
-    if isinstance(tags, str):
-        tags = [tags]
-
-    for tag in tags:
-        total_tags.add(tag.strip())
-
-for tag in sorted(total_tags):
+# -----------------------------------
+# 为每个 tag 生成 tag 页
+# -----------------------------------
+for tag in tags:
     slug = slugify(tag)
-    tag_file = TAG_DIR / f"{slug}.md"
-
-    tag_file.write_text(
-        f"""---
+    tag_path = os.path.join(TAG_DIR, f"{slug}.md")
+    with open(tag_path, "w", encoding="utf-8") as f:
+        f.write(f"""---
 layout: tagpage
-title: "Tag: {tag}"
 tag: {tag}
-robots: noindex
+permalink: /tag/{slug}/
 ---
+""")
 
-""",
-        encoding="utf-8"
-    )
-
-print(f"Tags generated: {len(total_tags)}")
+print(f"✅ Generated {len(tags)} tag pages in '{TAG_DIR}' folder.")
