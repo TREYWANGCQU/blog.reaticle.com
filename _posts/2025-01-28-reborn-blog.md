@@ -4,7 +4,7 @@ layout: post
 lang: cn
 title: 重启自动化博客：把精力只交给思考
 date: 2026-01-28
-tags: [github, AI]
+tags: [github, ai]
 mathjax: true
 
 
@@ -75,6 +75,8 @@ git push
 2. 解析 Front Matter 中的 tags
 
 1. 自动生成 tag/*.md
+
+1. 形如tags:[github, ai] _全部小写，无特殊符号_
 
 这些生成的 tag 页面本质上是普通 Markdown 文件，Jekyll 可以直接渲染，无需任何插件支持。
 

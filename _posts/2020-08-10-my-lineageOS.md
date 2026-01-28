@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 编译专属LineageOS
-tags: Android
+tags: android
 
 ---
 

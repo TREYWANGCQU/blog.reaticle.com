@@ -4,7 +4,7 @@ layout: post
 
 title: Github-page建站小记
 lang: cn
-tags: [github, web, UI]
+tags: [github, web, ui]
 
 ---
 

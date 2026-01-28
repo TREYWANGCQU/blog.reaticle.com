@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Set My Awsome Terminal
-tags: Linux
+tags: linux
 
 ---
 

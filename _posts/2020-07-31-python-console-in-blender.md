@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 扩展blender中的python环境
-tags: Blender-Reaticle
+tags: reaticle
 
 ---
 # 安装 pip， Python 包管理工具

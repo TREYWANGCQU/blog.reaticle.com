@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Private DNS
-tags: Linux
+tags: linux
 
 ---
 

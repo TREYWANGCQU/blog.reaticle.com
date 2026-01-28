@@ -1,7 +1,7 @@
 ---
 title: Tips to Unexpected Problems When Using Termux
 layout: post
-tags: [Andriod, Linux]
+tags: [andriod, linux]
 ---
 
 ## 1 Storage Permission
