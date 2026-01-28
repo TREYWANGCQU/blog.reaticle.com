@@ -103,7 +103,10 @@ git push
 
 > 2 其余工作，交给自动化即可。
 
-### 附件：GitHub Actions 工作流
+### 补遗1
+1. cloudflare cdn **延时**害苦我，压缩的字体要```等一等```，不然是404；
+1. 严重注意jekyll css的索引关系!
+### 补遗1：GitHub Actions 工作流
 ``` yaml
 on:
   push:
