@@ -6,7 +6,7 @@ date: 2026-01-28
 mathjax: true
 ---
 
->e-mail: y.wang@reaticle.com
+<a href="mailto:y.wang@reaticle.com"><i class="iconfont icon-mail-fill"></i> &nbsp;y.wang@reaticle.com</a>
 
 Dr. Yang Wang, a Senior Engineer at Chongqing Credit Co., Ltd., specializes in data analytics and smart city governance. He has led and participated in key projects such as the Chongqing Urban Investment Smart Construction Platform, the Smart Road & Bridge Operations System, and the High-Rise Fire Control Integration Platform. With a strong background in civil engineering and IT, he advances the “Engineering Supervision + Credit Governance + AI Empowerment” ecosystem, driving digital transformation in urban infrastructure and supporting the Digital Chongqing strategy.
 

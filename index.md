@@ -1,14 +1,11 @@
 ---
-layout: default
-title: Home
+layout: hometop
+title: 现在可“解封”的致谢
 date: 2026-01-28
 mathjax: true
 lang: cn
 
 ---
-
-
-# 现在可“解封”的致谢
 
 
 ## 致 谢
