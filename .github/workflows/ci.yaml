@@ -1,6 +1,6 @@
 on:
   push:
-    branches: [main]  # 或你的默认分支
+    branches: [mine]  # 或你的默认分支
   pull_request:
     types: [opened, synchronize]
 

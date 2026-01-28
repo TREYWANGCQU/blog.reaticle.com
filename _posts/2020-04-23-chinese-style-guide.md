@@ -3,7 +3,7 @@
 layout: post
 lang: cn
 title: 中文样式导航
-date: 2025-04-23
+date: 2020-04-23
 tags: github web UI
 mathjax: true
 
