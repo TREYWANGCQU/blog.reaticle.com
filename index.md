@@ -1,8 +1,9 @@
 ---
-layout: default
+layout: post
 title: Home
 date: 2026-01-28
 mathjax: true
+lang: cn
 
 ---
 
@@ -63,9 +64,6 @@ Cha\**i教授、Hoss\**ga教授、Ji\**hu教授、T. \**ans教授、We\**u教授
 最后，向所有关心和帮助过我的领导、老师、同学和朋友表示由衷的谢意！
 
 衷心地感谢在百忙之中评阅论文和参加答辩的各位专家、教授！   
-
-
-<br />
 
 <br />
 <br />

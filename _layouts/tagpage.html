@@ -2,41 +2,65 @@
 layout: default
 ---
 
-
 {% if page.tag %}
-<h1 class="tag-title"><i class="iconfont icon-bookmark-fill"></i> &nbsp;Tag: {{ page.tag }}</h1>
+<h1 class="tag-title">
+  <i class="iconfont icon-bookmark-fill"></i>
+  &nbsp;Tag: {{ page.tag }}
+</h1>
 <hr>
 {% endif %}
 
-{% for post in site.tags[page.tag] %}
-  <div class="blog-post">
-    <div class="post-side-meta">
-      
-      
-      <span class="day">
-        {{ post.date | date: '%d' }}
-       
-  
-      </span>
-      <span class="month">{{ post.date | date: '%b' }}</span> 
-        
+{% assign tagged_posts = site.tags[page.tag] %}
+
+{% if tagged_posts and tagged_posts.size > 0 %}
+
+  {% for post in tagged_posts %}
+    <div class="blog-post">
+      <div class="post-side-meta">
+        <span class="day">{{ post.date | date: "%d" }}</span>
+        <span class="month">{{ post.date | date: "%b" }}</span>
+      </div>
+
+      <div class="post-header">
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+
+        <span class="meta-tags float-left">
+          <i class="iconfont icon-bookmark-fill"></i>
+          {% for t in post.tags %}
+            <a href="/tag/{{ t | url_encode }}">{{ t }}</a>
+          {% endfor %}
+        </span>
+
+        <span class="float-right">
+          <i class="iconfont icon-calendar"></i>
+          {{ post.date | date: "%Y-%m-%d" }}
+        </span>
+      </div>
     </div>
-    <div  class="post-header">
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      
-      <span class="meta-tags float-left"> &nbsp;<i class="iconfont icon-bookmark-fill"></i>  {% for tag in post.tags %}
-  
-        <a href="/tag/{{ tag}}"> {{ tag }}</a>
-      {% endfor %} </span >
-      <span class="float-right">&nbsp; <i class="iconfont icon-calendar"></i>  {{ post.date | date: '%Y-%m-%d' }}</span>
-      
-    </div>
-   
-    
-  </div>
+  {% endfor %}
+
+{% else %}
+  <p>暂无相关文章。</p>
+{% endif %}
+
+<!-- ===== Tag Archive===== -->
+
+<h1><i class="iconfont icon-archive"></i> Archive</h1>
+<hr>
+
+<div class="meta-tags">
+{% capture temptags %}
+  {% for tag in site.tags %}
+    {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
+  {% endfor %}
+{% endcapture %}
+
+{% assign sortedtemptags = temptags | split:' ' | sort | reverse %}
+
+{% for temptag in sortedtemptags %}
+  {% assign tagitems = temptag | split: '#' %}
+  {% capture tagname %}{{ tagitems[1] }}{% endcapture %}
+
+  <a href="/tag/{{ tagname | url_encode }}">{{ tagname }}</a>
 {% endfor %}
-
-
-
-
-{% include archive.html %}
+</div>
