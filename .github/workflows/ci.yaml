@@ -53,7 +53,7 @@ jobs:
             > all-text.txt
           pyftsubset assets/fonts/fontSource/YangRenDongZhuShiTi.ttf \
             --text-file=all-text.txt \
-            --output-file=assets/fonts/YangRenDongZhuShiTi.woff2 \
+            --output-file=_site/assets/fonts/YangRenDongZhuShiTi.woff2 \
             --flavor=woff2 \
             --layout-features='*' \
             --with-zopfli

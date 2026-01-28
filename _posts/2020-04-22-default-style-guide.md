@@ -3,7 +3,7 @@ layout: post
 
 title: Default style guide
 author: <a href="https://github.com/jekyll/minima" >jekyll/minima</a>
-tags: github web UI
+tags: [github, web, UI]
 mathjax: true
 ---
 
