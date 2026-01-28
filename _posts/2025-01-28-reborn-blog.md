@@ -143,14 +143,11 @@ jobs:
         run: |
           python scripts/gen_tags.py
       
-      # 5️⃣ Jekyll 构建
-      - name: Build with Jekyll
-        run: bundle exec jekyll build
-      
-      # 6️⃣ 字体子集化（HTML 已生成）
+     
+      # 5️⃣ 字体子集化（HTML 已生成）
       - name: Subset Chinese font
         run: |
-          find _site -name "*.html" -print0 \
+          find . \( -name "*.md" -o -name "*.html" -o -name "*.yml" \) -print0 \
             | xargs -0 cat \
             | sed 's/<[^>]*>//g' \
             | tr -d '\n' \
@@ -162,7 +159,11 @@ jobs:
             --flavor=woff2 \
             --layout-features='*' \
             --with-zopfli
-      
+
+      #  6️⃣Jekyll 构建
+      - name: Build with Jekyll
+        run: bundle exec jekyll build
+
       # 7️⃣ 上传构建产物
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
