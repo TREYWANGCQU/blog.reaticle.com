@@ -37,9 +37,10 @@ jobs:
       - name: Generate tag pages
         run: |
           python scripts/gen_tags.py
-      
+        # 确认生成的文件位置
+          ls -la tag/ || ls -la _site/tag/ || echo "Tag directory not found"
      
-      # 5️⃣ 字体子集化（HTML 已生成）
+      # 5️⃣ 字体子集化
       - name: Subset Chinese font
         run: |
           find . \( -name "*.md" -o -name "*.html" -o -name "*.yml" \) -print0 \
@@ -54,14 +55,18 @@ jobs:
             --flavor=woff2 \
             --layout-features='*' \
             --with-zopfli
-
+        # 确认字体文件生成
+            ls -lh assets/fonts/YangRenDongZhuShiTi.woff2
       #  6️⃣Jekyll 构建
       - name: Build with Jekyll
         run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
 
       # 7️⃣ 上传构建产物
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+       
 
   # 部署任务
   deploy:

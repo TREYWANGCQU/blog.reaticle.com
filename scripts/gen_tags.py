@@ -4,6 +4,7 @@ import yaml
 import re
 import unicodedata
 
+
 POST_DIR = "_posts"
 TAG_DIR = "tag"
 

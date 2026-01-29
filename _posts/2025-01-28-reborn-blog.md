@@ -103,11 +103,9 @@ git push
 
 > 2 其余工作，交给自动化即可。
 
-### 补遗1
-1. cloudflare cdn **延时**害苦我，压缩的字体要```等一等```，不然是404；
-1. 严重注意jekyll css的索引关系! 
 
-### 补遗2
+
+### 补遗1
 特别构建路径:```URL / baseurl / relative_url``` 问题
 - _config.yml 明确 baseusrl 最重要
 ```yaml
@@ -130,7 +128,7 @@ permalink: /tag/{slug}/
 }
 ```
 
-### 补遗3：GitHub Actions 工作流
+### 补遗2：GitHub Actions 工作流
 ``` yaml
 on:
   push:

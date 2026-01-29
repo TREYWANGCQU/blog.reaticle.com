@@ -12,7 +12,12 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-paginate
-
+include:
+  - _pages
+  - tag  
+keep_files:
+  - assets
+  - tag
 markdown:         kramdown
 highlighter:      rouge
 
