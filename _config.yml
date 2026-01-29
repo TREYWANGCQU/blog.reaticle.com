@@ -18,6 +18,17 @@ include:
 keep_files:
   - assets
   - tag
+exclude:
+  - scripts/
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - "*.gem"
+  - "*.gemspec"
+  - LICENSE
+  - README.md
+  # 不要排除 assets!
 markdown:         kramdown
 highlighter:      rouge
 

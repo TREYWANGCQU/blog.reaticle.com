@@ -37,7 +37,6 @@ jobs:
       - name: Generate tag pages
         run: |
           python scripts/gen_tags.py
-        # 确认生成的文件位置
           ls -la tag/ || ls -la _site/tag/ || echo "Tag directory not found"
      
       # 5️⃣ 字体子集化
@@ -55,15 +54,30 @@ jobs:
             --flavor=woff2 \
             --layout-features='*' \
             --with-zopfli
-        # 确认字体文件生成
             ls -lh assets/fonts/YangRenDongZhuShiTi.woff2
+
       #  6️⃣Jekyll 构建
       - name: Build with Jekyll
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
+      
 
-      # 7️⃣ 上传构建产物
+
+       # 7️⃣ 验证构建产物
+      - name: Verify build output
+        run: |
+          echo "=== Checking tag directory ==="
+          ls -la _site/tag/ || echo "⚠️  No tag directory in _site"
+          
+          echo "=== Checking fonts directory ==="
+          ls -la _site/assets/fonts/ || echo "⚠️  No fonts directory in _site"
+          
+          echo "=== Site structure ==="
+          find _site -type f -name "*.woff2" -o -type d -name "tag"
+
+
+      # 8️⃣上传构建产物
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
        
