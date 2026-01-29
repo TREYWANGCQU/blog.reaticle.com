@@ -106,27 +106,27 @@ git push
 
 
 ### 补遗1
-特别构建路径:```URL / baseurl / relative_url``` 问题
-- _config.yml 明确 baseusrl 最重要
+特别注意构建路径:```_config.yaml``` 问题：
 ```yaml
-baseurl: ""        # 如果是 username.github.io
-# baseurl: "/repo-name"  # 如果是项目页
-url: "https://username.github.io"
+include:
+  - _pages
+  - tag  
+keep_files:
+  - assets
+  - tag
+exclude:
+  - scripts/
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - "*.gem"
+  - "*.gemspec"
+  - LICENSE
+  - README.md
+  # 不要排除 assets!
 ```
 
-- tag permalink 明确 relative_url
-```yaml
-permalink: /tag/{slug}/
-```
-- 有静态资源用 absolute_url
-```yaml
-<link rel="stylesheet" href="{{ "/assets/css/style.css" | absolute_url }}">
-字体 SCSS 改成：
-@font-face {
-  font-family: 'YangRenDongZhuShiTi';
-  src: url('{{ "/assets/fonts/YangRenDongZhuShiTi.woff2" | relative_url }}') format('woff2');
-}
-```
 
 ### 补遗2：GitHub Actions 工作流
 ``` yaml
@@ -169,9 +169,9 @@ jobs:
       - name: Generate tag pages
         run: |
           python scripts/gen_tags.py
-      
+          ls -la tag/ || ls -la _site/tag/ || echo "Tag directory not found"
      
-      # 5️⃣ 字体子集化（HTML 已生成）
+      # 5️⃣ 字体子集化
       - name: Subset Chinese font
         run: |
           find . \( -name "*.md" -o -name "*.html" -o -name "*.yml" \) -print0 \
@@ -186,14 +186,33 @@ jobs:
             --flavor=woff2 \
             --layout-features='*' \
             --with-zopfli
+            ls -lh assets/fonts/YangRenDongZhuShiTi.woff2
 
       #  6️⃣Jekyll 构建
       - name: Build with Jekyll
         run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+      
 
-      # 7️⃣ 上传构建产物
+
+       # 7️⃣ 验证构建产物
+      - name: Verify build output
+        run: |
+          echo "=== Checking tag directory ==="
+          ls -la _site/tag/ || echo "⚠️  No tag directory in _site"
+          
+          echo "=== Checking fonts directory ==="
+          ls -la _site/assets/fonts/ || echo "⚠️  No fonts directory in _site"
+          
+          echo "=== Site structure ==="
+          find _site -type f -name "*.woff2" -o -type d -name "tag"
+
+
+      # 8️⃣上传构建产物
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+       
 
   # 部署任务
   deploy:
