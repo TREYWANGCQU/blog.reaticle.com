@@ -226,4 +226,11 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+       
+      # 🆕 部署后验证（可选）
+      - name: Verify deployment
+        run: |
+          sleep 30  # 等待 CDN 传播
+          curl -I ${{ steps.deployment.outputs.page_url }}BUILD_INFO.txt || true
 ```
