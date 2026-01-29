@@ -105,8 +105,32 @@ git push
 
 ### 补遗1
 1. cloudflare cdn **延时**害苦我，压缩的字体要```等一等```，不然是404；
-1. 严重注意jekyll css的索引关系!
-### 补遗1：GitHub Actions 工作流
+1. 严重注意jekyll css的索引关系! 
+
+### 补遗2
+特别构建路径:```URL / baseurl / relative_url``` 问题
+- _config.yml 明确 baseusrl 最重要
+```yaml
+baseurl: ""        # 如果是 username.github.io
+# baseurl: "/repo-name"  # 如果是项目页
+url: "https://username.github.io"
+```
+
+- tag permalink 明确 relative_url
+```yaml
+permalink: /tag/{slug}/
+```
+- 有静态资源用 absolute_url
+```yaml
+<link rel="stylesheet" href="{{ "/assets/css/style.css" | absolute_url }}">
+字体 SCSS 改成：
+@font-face {
+  font-family: 'YangRenDongZhuShiTi';
+  src: url('{{ "/assets/fonts/YangRenDongZhuShiTi.woff2" | relative_url }}') format('woff2');
+}
+```
+
+### 补遗3：GitHub Actions 工作流
 ``` yaml
 on:
   push:
