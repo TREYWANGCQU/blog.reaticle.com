@@ -14,10 +14,13 @@ plugins:
   - jekyll-paginate
 include:
   - _pages
-  - tag  
+  - tag
+  - .nojekyll #防止 GitHub Pages 二次处理
 keep_files:
   - assets
   - tag
+  - CNAME
+  - .nojekyll
 exclude:
   - scripts/
   - vendor/
@@ -28,11 +31,13 @@ exclude:
   - "*.gemspec"
   - LICENSE
   - README.md
+  - all-text.txt # 字体子集化临时文件
+  - assets/fonts/fontSource/ # 源字体文件目录
+  - "*.pyc"
+  - __pycache__/
   # 不要排除 assets!
-markdown:         kramdown
-highlighter:      rouge
-
-
+markdown: kramdown
+highlighter: rouge
 
 paginate: 7
 paginate_path: "/blog/page:num/"

@@ -1,6 +1,6 @@
 on:
   push:
-    branches: [mine]  # 或你的默认分支
+    branches: [mine] # 或你的默认分支
   pull_request:
     types: [opened, synchronize]
 
@@ -16,29 +16,29 @@ jobs:
     steps:
       # 1️⃣ 拉代码
       - uses: actions/checkout@v4
-      
+
       # 2️⃣ Ruby（Jekyll）
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.2
           bundler-cache: true
-      
+
       # 3️⃣ Python（tag + 字体）
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      
+
       - name: Install Python deps
         run: |
           pip install fonttools pyyaml brotli
-      
+
       # 4️⃣ 生成 tag 页面（在 Jekyll build 前）
       - name: Generate tag pages
         run: |
           python scripts/gen_tags.py
           ls -la tag/ || ls -la _site/tag/ || echo "Tag directory not found"
-     
+
       # 5️⃣ 字体子集化
       - name: Subset Chinese font
         run: |
@@ -61,30 +61,32 @@ jobs:
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
-      
 
+      # 🆕 .nojekyll 防止 GitHub Pages 二次处理 CNAME 确保自定义域
+      - name: Add critical files
+        run: |
+          touch _site/.nojekyll
+          echo "blog.reaticle.com" > _site/CNAME
 
-       # 7️⃣ 验证构建产物
+        # 7️⃣ 验证构建产物
       - name: Verify build output
         run: |
           echo "=== Checking tag directory ==="
           ls -la _site/tag/ || echo "⚠️  No tag directory in _site"
-          
+
           echo "=== Checking fonts directory ==="
           ls -la _site/assets/fonts/ || echo "⚠️  No fonts directory in _site"
-          
+
           echo "=== Site structure ==="
           find _site -type f -name "*.woff2" -o -type d -name "tag"
-
 
       # 8️⃣上传构建产物
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-       
 
   # 部署任务
   deploy:
-    if: github.ref == 'refs/heads/mine'  # 只在主分支部署
+    if: github.ref == 'refs/heads/mine' # 只在主分支部署
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -93,14 +95,10 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 
-      
+        uses: actions/deploy-pages@v4
+
       # 🆕 部署后验证
       - name: Verify deployment
         run: |
           sleep 30  # 等待 CDN 传播
           curl -I ${{ steps.deployment.outputs.page_url }}BUILD_INFO.txt || true
-
-      
-
-    

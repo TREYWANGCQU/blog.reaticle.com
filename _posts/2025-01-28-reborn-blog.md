@@ -28,7 +28,6 @@ mathjax: true
 这些问题并不致命，但会持续消耗心力。  
 当维护成本开始高于写作成本，博客自然会停下来。
 
-
 ## 二、升级中文字体压缩：从“本地工具”到“构建环节”
 
 ### 1. 放弃 FontSpider
@@ -53,11 +52,13 @@ FontSpider 在早期解决了中文 Web 字体的实际问题，但在长期使�
 3. 自动发布到 GitHub Pages
 
 调整之后，本地写作流程变得非常简单，只剩下：
+
 ```bash
 git push
 ```
 
 ## 三、tag 自动生成：让结构成为派生结果
+
 ### 1. pages-themes/minimal 的现实约束
 
 在 GitHub Pages 环境下使用 pages-themes/minimal，意味着：
@@ -74,12 +75,11 @@ git push
 
 2. 解析 Front Matter 中的 tags
 
-1. 自动生成 tag/*.md
+3. 自动生成 tag/*.md
 
-1. 形如tags:[github, ai] _全部小写，无特殊符号_
+4. 形如tags:[github, ai] _全部小写，无特殊符号_
 
 这些生成的 tag 页面本质上是普通 Markdown 文件，Jekyll 可以直接渲染，无需任何插件支持。
-
 
 ## 四、启示
 
@@ -103,17 +103,20 @@ git push
 
 > 2 其余工作，交给自动化即可。
 
-
-
 ### 补遗1
+
 特别注意构建路径:```_config.yaml``` 问题：
+
 ```yaml
 include:
   - _pages
-  - tag  
+  - tag
+  - .nojekyll #防止 GitHub Pages 二次处理
 keep_files:
   - assets
   - tag
+  - CNAME
+  - .nojekyll
 exclude:
   - scripts/
   - vendor/
@@ -124,11 +127,15 @@ exclude:
   - "*.gemspec"
   - LICENSE
   - README.md
+  - all-text.txt # 字体子集化临时文件
+  - assets/fonts/fontSource/ # 源字体文件目录
+  - "*.pyc"
+  - __pycache__/
   # 不要排除 assets!
 ```
 
-
 ### 补遗2：GitHub Actions 工作流
+
 ``` yaml
 on:
   push:
@@ -194,9 +201,13 @@ jobs:
         env:
           JEKYLL_ENV: production
       
+      # 🆕 .nojekyll 防止 GitHub Pages 二次处理 CNAME 确保自定义域
+      - name: Add critical files
+        run: |
+          touch _site/.nojekyll
+          echo "blog.reaticle.com" > _site/CNAME
 
-
-       # 7️⃣ 验证构建产物
+      # 7️⃣ 验证构建产物
       - name: Verify build output
         run: |
           echo "=== Checking tag directory ==="
