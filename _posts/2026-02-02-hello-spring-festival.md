@@ -29,7 +29,7 @@ mathjax: false
   letter-spacing: 2px;
   padding: 10px 8px;
   border: 1px solid #008b8b;
-  border-radius: 5px;
+  border-radius: 99px;
 }
 </style>
 
