@@ -28,3 +28,64 @@ mathjax: false
 
 隔离与端口：host 模式容器与宿主机共享 IP、端口空间，容易端口冲突；macvlan 给容器独立 IP/端口空间，冲突少。\
 网络身份：host 对外仍是“宿主机那台设备”；macvlan 对外是“多台设备”（每个容器一个 MAC/IP）
+
+# 相关指令
+
+## 1) 查看（Docker 网络）
+
+- 列出所有 Docker 网络：
+
+  ```bash
+  docker network ls
+  ```  
+
+## 2) 新增（创建网络 + 给容器加“网卡”）
+
+- 创建一个新的 bridge 网络（最常用）：
+
+  ```bash
+  docker network create <net_name>
+  ```  
+
+- 创建自定义网段的 bridge 网络：
+
+  ```bash
+  docker network create --driver bridge --subnet 172.30.1.0/24 --gateway 172.30.1.1 my_net
+  ```
+
+- 给“正在运行的容器”新增一张网卡（把容器接入另一个网络）：
+
+  ```bash
+  docker network connect <net_name> <container_name_or_id>
+  ```
+
+## 3) 删除（断开容器网卡 / 删除网络）
+
+- 从容器上移除一张网卡（把容器从某网络断开）：
+
+  ```bash
+  docker network disconnect <net_name> <container_name_or_id>
+  ```
+
+- 删除一个或多个 Docker 网络：
+
+  ```bash
+  docker network rm <net_name_or_id> [more...]
+  ```
+
+- 清理所有“未使用”的网络：
+
+  ```bash
+  docker network prune -f
+  ```
+
+## 4) 查看/删除宿主机虚拟网卡（docker0、br-xxxx）
+
+- 宿主机上看到的 `br-xxxx` 网桥通常是 Docker 创建的；可用 `docker network ls` / `docker network inspect` 去对应确认。
+
+- 如果你要在宿主机层面手动删除某个网桥（例如 `br-59ec...`）：
+
+  ```bash
+  ifconfig br-59ec53121ef6 down
+  brctl delbr br-59ec53121ef6
+  ```
