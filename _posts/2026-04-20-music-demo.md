@@ -86,4 +86,8 @@ Warm Rhodes piano, smooth electric bass, crisp snap and clap percussion, light s
 
 变奏处理： 尾声关于“永川龙”的部分，在 R&B 框架内引入了恰恰（Cha-cha）律动，旨在打破听觉疲劳。
 
-listen url: [画童年.mp3]()
+## 画童年.mp3
+<audio controls preload="none" style="width: 100%; max-width: 400px;">
+  <source src="https://github.com/TREYWANGCQU/blog.reaticle.com/raw/refs/heads/mine/assets/huhusong.mp3" type="audio/mpeg">
+  您的浏览器不支持原生音频播放，请<a href="https://github.com/TREYWANGCQU/blog.reaticle.com/raw/refs/heads/mine/assets/huhusong.mp3">下载音频</a>。
+</audio>
