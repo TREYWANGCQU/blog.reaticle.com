@@ -92,14 +92,6 @@ Warm Rhodes piano, smooth electric bass, crisp snap and clap percussion, light s
   您的浏览器不支持原生音频播放，请<a href="https://github.com/TREYWANGCQU/blog.reaticle.com/raw/refs/heads/mine/assets/huhusong.mp3">下载音频</a>。
 </audio>
 
-**[国内网易云](https://music.163.com/song?id=3372283648&uct2=U2FsdGVkX1++EuF183o8EpFQDIk4EY53I0mq3VHfE1g=)：**
-<iframe 
-    frameborder="no" 
-    border="0" 
-    marginwidth="0" 
-    marginheight="0" 
-    width="330" 
-    height="86" 
-    src="https://music.163.com/song?id=3372283648&uct2=U2FsdGVkX1++EuF183o8EpFQDIk4EY53I0mq3VHfE1g=">
-</iframe>
+**国内网易云**:[点击跳转->](https://music.163.com/song?id=3372283648&uct2=U2FsdGVkX1++EuF183o8EpFQDIk4EY53I0mq3VHfE1g=)
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=3372283648&auto=1&height=66"></iframe>
 
