@@ -1,7 +1,10 @@
 # My Blog-WANG, YANG
 
+Engineering, systems and the friction of reality.
 
-Memoirs about me, the music and the night. Memoirs about think-ism and practice-ism
+工程、系统与现实摩擦面的观察与实践。
+
+Memoirs about me, the music and the night. Memoirs about think-ism and practice-ism.
 
 ![logo](assets/img/logo2.png)
 
