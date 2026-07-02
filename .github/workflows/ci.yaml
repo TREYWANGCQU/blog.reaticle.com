@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # 1️⃣ 拉代码
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       # 2️⃣ Ruby（Jekyll）
       - uses: ruby/setup-ruby@v1
@@ -25,7 +25,7 @@ jobs:
 
       # 3️⃣ Python（tag + 字体）
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
@@ -82,7 +82,7 @@ jobs:
 
       # 8️⃣上传构建产物
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
 
   # 部署任务
   deploy:
@@ -95,7 +95,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
 
       # 🆕 部署后验证
       - name: Verify deployment
