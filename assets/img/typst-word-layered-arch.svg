@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 380" width="100%" height="100%">
+  <defs>
+    <style>
+      .layer-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 13px; font-weight: 700; fill: #334155; }
+      .card-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 13px; font-weight: 600; fill: #0f172a; }
+      .card-desc { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 11px; fill: #64748b; line-height: 1.4; }
+      .tag { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 10px; font-weight: 600; }
+    </style>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2.5" flood-color="#0f172a" flood-opacity="0.05"/>
+    </filter>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="380" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Layer 1: Workflow -->
+  <rect x="25" y="20" width="810" height="90" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="40" y="42" class="layer-title">1. Workflow 流程编排与门禁层 (~/.gemini/config/global_workflows/)</text>
+
+  <rect x="40" y="52" width="245" height="46" rx="6" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="52" y="71" class="card-title">/typst-publisher</text>
+  <text x="52" y="87" class="card-desc">正向编译 · 质检门禁 · 基线打标 SOP</text>
+
+  <rect x="305" y="52" width="245" height="46" rx="6" fill="#ffffff" stroke="#6ee7b7" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="317" y="71" class="card-title">/typst-archiver</text>
+  <text x="317" y="87" class="card-desc">会签回收 · 差异比对 · 合流归档 SOP</text>
+
+  <rect x="570" y="52" width="245" height="46" rx="6" fill="#ffffff" stroke="#fbcfe8" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="582" y="71" class="card-title">/docx-template-sync</text>
+  <text x="582" y="87" class="card-desc">标杆提取 · 聚类合成 · 模板分发 SOP</text>
+
+  <!-- Layer 2: Skills -->
+  <rect x="25" y="125" width="810" height="135" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="40" y="147" class="layer-title">2. Skill 原子能力管道层 (~/.gemini/config/skills/)</text>
+
+  <!-- Upstream Skill -->
+  <rect x="40" y="157" width="180" height="90" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="50" y="177" class="card-title">typst (Typst Writer)</text>
+  <text x="50" y="195" class="card-desc">上游语义起草</text>
+  <text x="50" y="210" class="card-desc">• 纯语义 AST，禁内联样式</text>
+  <text x="50" y="225" class="card-desc">• 仅输出源码，由人工定出口</text>
+
+  <!-- Downstream 1 -->
+  <rect x="240" y="157" width="185" height="90" rx="6" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="250" y="177" class="card-title">typst-docx-publisher</text>
+  <text x="250" y="195" class="card-desc">正向注水编译器</text>
+  <text x="250" y="210" class="card-desc">• Pandoc AST 样式映射</text>
+  <text x="250" y="225" class="card-desc">• 大纲绑定与段落网格注入</text>
+
+  <!-- Downstream 2 -->
+  <rect x="445" y="157" width="185" height="90" rx="6" fill="#ffffff" stroke="#fbcfe8" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="455" y="177" class="card-title">docx-reference-builder</text>
+  <text x="455" y="195" class="card-desc">标杆逆向提取器</text>
+  <text x="455" y="210" class="card-desc">• 视觉指纹扫描与聚类</text>
+  <text x="455" y="225" class="card-desc">• 虚拟 Heading 1~4 合成注入</text>
+
+  <!-- Downstream 3 -->
+  <rect x="650" y="157" width="170" height="90" rx="6" fill="#ffffff" stroke="#6ee7b7" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="660" y="177" class="card-title">word-to-typst-archiver</text>
+  <text x="660" y="195" class="card-desc">两阶段逆向归档器</text>
+  <text x="660" y="210" class="card-desc">• 四层清洗 + 表格跨行跨列</text>
+  <text x="660" y="225" class="card-desc">• Section-level 差异合流</text>
+
+  <!-- Layer 3: Templates -->
+  <rect x="25" y="275" width="810" height="85" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="40" y="297" class="layer-title">3. 资产与模板规范库 (~/.gemini/config/templates/)</text>
+
+  <rect x="40" y="307" width="375" height="42" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="55" y="333" class="card-title">reference.docx 母版库 (公文 / 报告 / 方案)</text>
+
+  <rect x="435" y="307" width="385" height="42" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="450" y="333" class="card-title">@local Typst 企业级通用模板包</text>
+
+  <!-- Connector Lines -->
+  <path d="M 160 100 L 160 150" stroke="#94a3b8" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 425 100 L 730 150" stroke="#94a3b8" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 690 100 L 540 150" stroke="#94a3b8" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
+</svg>

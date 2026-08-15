@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 320" width="100%" height="100%">
+  <defs>
+    <style>
+      .arch-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", sans-serif; font-size: 13px; font-weight: 700; fill: #1e293b; }
+      .layer-badge { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", sans-serif; font-size: 10px; font-weight: 700; fill: #059669; }
+      .layer-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", sans-serif; font-size: 12px; font-weight: 600; fill: #0f172a; }
+      .layer-desc { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", sans-serif; font-size: 11px; fill: #64748b; }
+    </style>
+    <filter id="shadow4" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#0f172a" flood-opacity="0.05"/>
+    </filter>
+    <marker id="arrow4" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#059669" />
+    </marker>
+  </defs>
+
+  <rect width="860" height="320" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Left Stage 1 -->
+  <rect x="25" y="20" width="460" height="280" rx="8" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.5" filter="url(#shadow4)"/>
+  <rect x="25" y="20" width="460" height="36" rx="8" fill="#ecfdf5"/>
+  <text x="40" y="43" class="arch-title" style="fill: #065f46;">Stage 1: 独立逆向净化 (Staging Ingestion)</text>
+
+  <!-- Stage 1 Layers -->
+  <rect x="40" y="66" width="430" height="48" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="52" y="84" class="layer-badge">LAYER 1</text>
+  <text x="110" y="84" class="layer-title">OpenXML 解包与媒体抽取</text>
+  <text x="52" y="102" class="layer-desc">解压提取 document.xml，图片写入 .staging/assets/ 并映射 r:id</text>
+
+  <rect x="40" y="122" width="430" height="48" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="52" y="140" class="layer-badge">LAYER 2</text>
+  <text x="110" y="140" class="layer-title">启发式语义与大纲重构</text>
+  <text x="52" y="158" class="layer-desc">正则识别“一、/（一）/1.”硬序号，清洗全角缩进与软换行</text>
+
+  <rect x="40" y="178" width="430" height="48" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="52" y="196" class="layer-badge">LAYER 3</text>
+  <text x="110" y="196" class="layer-title">表格网格与合并对齐</text>
+  <text x="52" y="214" class="layer-desc">解析 gridSpan / vMerge，映射为 Typst table.cell(colspan, rowspan)</text>
+
+  <rect x="40" y="234" width="430" height="48" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="52" y="252" class="layer-badge">LAYER 4</text>
+  <text x="110" y="252" class="layer-title">Typst AST 序列化器</text>
+  <text x="52" y="270" class="layer-desc">输出纯净中间态 staging.typ，支持独立预览与调试</text>
+
+  <!-- Right Stage 2 -->
+  <rect x="520" y="20" width="315" height="280" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5" filter="url(#shadow4)"/>
+  <rect x="520" y="20" width="315" height="36" rx="8" fill="#eff6ff"/>
+  <text x="535" y="43" class="arch-title" style="fill: #1e40af;">Stage 2: 差异对齐与安全合流</text>
+
+  <!-- Stage 2 Steps -->
+  <rect x="535" y="66" width="285" height="64" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="548" y="87" class="layer-title">1. Section-level AST 差异比对</text>
+  <text x="548" y="105" class="layer-desc">对比 staging.typ 与 main.typ</text>
+  <text x="548" y="120" class="layer-desc">精准识别变动章节与表格文字</text>
+
+  <rect x="535" y="140" width="285" height="68" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="548" y="161" class="layer-title">2. 安全合流 (Safe Ingestion)</text>
+  <text x="548" y="179" class="layer-desc">100% 保护顶部 #import、宏与配置</text>
+  <text x="548" y="195" class="layer-desc">仅替换或合并变动的正文片段</text>
+
+  <rect x="535" y="218" width="285" height="64" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="548" y="239" class="layer-title">3. 资产合并与 Git Commit</text>
+  <text x="548" y="257" class="layer-desc">.staging/assets/ 原子迁移至 assets/</text>
+  <text x="548" y="272" class="layer-desc">生成带修订标记的提交日志</text>
+
+  <!-- Arrow between Stage 1 and Stage 2 -->
+  <path d="M 485 160 L 515 160" stroke="#059669" stroke-width="2" fill="none" marker-end="url(#arrow4)"/>
+</svg>

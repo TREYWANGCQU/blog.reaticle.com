@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 220" width="100%" height="100%">
+  <defs>
+    <style>
+      .box-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 13px; font-weight: 700; fill: #475569; letter-spacing: 0.5px; }
+      .node-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 14px; font-weight: 600; fill: #0f172a; }
+      .node-desc { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 11px; fill: #64748b; }
+      .edge-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 11px; font-weight: 600; fill: #2563eb; }
+      .edge-label-rev { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 11px; font-weight: 600; fill: #059669; }
+    </style>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2563eb" />
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#059669" />
+    </marker>
+    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="860" height="220" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Left Container: Technical Domain -->
+  <rect x="25" y="25" width="240" height="170" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-dasharray="4 4" stroke-width="1.2"/>
+  <text x="40" y="48" class="box-title">技术工程域 (Typst 体系)</text>
+
+  <rect x="40" y="62" width="210" height="52" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2" filter="url(#card-shadow)"/>
+  <text x="55" y="84" class="node-title">纯语义 .typ 源码</text>
+  <text x="55" y="101" class="node-desc">AST 结构 · 模块化 · @local 模板</text>
+
+  <rect x="40" y="126" width="210" height="52" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2" filter="url(#card-shadow)"/>
+  <text x="55" y="148" class="node-title">Git 版本控制库</text>
+  <text x="55" y="165" class="node-desc">行级 Diff 审查 · 基线锚点记录</text>
+
+  <!-- Right Container: Business Domain -->
+  <rect x="595" y="25" width="240" height="170" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-dasharray="4 4" stroke-width="1.2"/>
+  <text x="610" y="48" class="box-title">业务协同域 (Word 体系)</text>
+
+  <rect x="610" y="62" width="210" height="52" rx="6" fill="#fdf2f8" stroke="#fbcfe8" stroke-width="1.2" filter="url(#card-shadow)"/>
+  <text x="625" y="84" class="node-title">规范 Baseline.docx</text>
+  <text x="625" y="101" class="node-desc">公文字体 · 多级编号 · 标准表格</text>
+
+  <rect x="610" y="126" width="210" height="52" rx="6" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.2" filter="url(#card-shadow)"/>
+  <text x="625" y="148" class="node-title">协作批注与修订</text>
+  <text x="625" y="165" class="node-desc">跨部门审阅 · 文字调整 (样式可能降级)</text>
+
+  <!-- Middle Forward Flow -->
+  <path d="M 250 88 L 600 88" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#arrow-blue)"/>
+  <rect x="300" y="66" width="250" height="24" rx="4" fill="#ffffff" stroke="#93c5fd" stroke-width="1"/>
+  <text x="425" y="82" text-anchor="middle" class="edge-label">正向高保真注水 (typst-docx-publisher)</text>
+
+  <!-- Right Downward Flow -->
+  <path d="M 715 114 L 715 124" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-blue)"/>
+
+  <!-- Middle Reverse Flow -->
+  <path d="M 610 152 L 260 152" stroke="#059669" stroke-width="2" fill="none" marker-end="url(#arrow-green)"/>
+  <rect x="305" y="140" width="240" height="24" rx="4" fill="#ffffff" stroke="#6ee7b7" stroke-width="1"/>
+  <text x="425" y="156" text-anchor="middle" class="edge-label-rev">两阶段逆向合流 (word-to-typst-archiver)</text>
+
+  <!-- Left Upward Flow -->
+  <path d="M 145 126 L 145 116" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="3 3" fill="none"/>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 300" width="100%" height="100%">
+  <defs>
+    <style>
+      .phase-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", sans-serif; font-size: 13px; font-weight: 700; fill: #0f172a; }
+      .branch-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", sans-serif; font-size: 12px; font-weight: 600; }
+      .desc-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", sans-serif; font-size: 11px; fill: #475569; line-height: 1.4; }
+    </style>
+    <filter id="shadow5" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#0f172a" flood-opacity="0.05"/>
+    </filter>
+    <marker id="arrow5" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <rect width="860" height="300" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Phase 1 -->
+  <rect x="25" y="25" width="230" height="250" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2" filter="url(#shadow5)"/>
+  <rect x="25" y="25" width="230" height="36" rx="8" fill="#eff6ff"/>
+  <text x="40" y="48" class="phase-title" style="fill: #1e40af;">阶段 1: 起草与骨架构建</text>
+
+  <rect x="40" y="72" width="200" height="52" rx="5" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="50" y="92" class="branch-title" style="fill: #0f172a;">触发 typst Skill</text>
+  <text x="50" y="110" class="desc-text">生成纯语义 .typ 源码</text>
+
+  <text x="40" y="146" class="desc-text" style="font-weight: 600; fill: #334155;">出口裁决分支：</text>
+  <text x="40" y="168" class="desc-text">① 内部审阅 ──► 高保真 PDF</text>
+  <text x="40" y="192" class="desc-text">② 源码留存 ──► 沉淀为基础模块</text>
+  <text x="40" y="216" class="desc-text">③ 跨部门会签 ──► 触发阶段 2 导出</text>
+
+  <!-- Arrow Phase 1 to Phase 2 -->
+  <path d="M 255 150 L 295 150" stroke="#64748b" stroke-width="1.5" fill="none" marker-end="url(#arrow5)"/>
+
+  <!-- Phase 2 -->
+  <rect x="300" y="25" width="230" height="250" rx="8" fill="#ffffff" stroke="#fbcfe8" stroke-width="1.2" filter="url(#shadow5)"/>
+  <rect x="300" y="25" width="230" height="36" rx="8" fill="#fdf2f8"/>
+  <text x="315" y="48" class="phase-title" style="fill: #9d174d;">阶段 2: 跨部门会签交付</text>
+
+  <rect x="315" y="72" width="200" height="52" rx="5" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="325" y="92" class="branch-title" style="fill: #0f172a;">运行 /typst-publisher</text>
+  <text x="325" y="110" class="desc-text">导出 Baseline.docx</text>
+
+  <rect x="315" y="138" width="200" height="115" rx="5" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="325" y="160" class="branch-title" style="fill: #b45309;">协作方在 Word 中修改</text>
+  <text x="325" y="180" class="desc-text">• 添加审阅批注</text>
+  <text x="325" y="200" class="desc-text">• 修改正文 / 表格数据</text>
+  <text x="325" y="220" class="desc-text">• 样式可能降级为 Normal</text>
+
+  <!-- Arrow Phase 2 to Phase 3 -->
+  <path d="M 530 150 L 570 150" stroke="#64748b" stroke-width="1.5" fill="none" marker-end="url(#arrow5)"/>
+
+  <!-- Phase 3 -->
+  <rect x="575" y="25" width="260" height="250" rx="8" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.2" filter="url(#shadow5)"/>
+  <rect x="575" y="25" width="260" height="36" rx="8" fill="#ecfdf5"/>
+  <text x="590" y="48" class="phase-title" style="fill: #065f46;">阶段 3: 归档与决策分支</text>
+
+  <!-- Branch A -->
+  <rect x="590" y="72" width="230" height="85" rx="5" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="600" y="92" class="branch-title" style="fill: #15803d;">分支 A：常规迭代 / 长期维护</text>
+  <text x="600" y="110" class="desc-text">触发 /typst-archiver</text>
+  <text x="600" y="128" class="desc-text">Stage 1 逆向 ──► Stage 2 比对合流</text>
+  <text x="600" y="146" class="desc-text">回填 main.typ 并提交 Git 仓库</text>
+
+  <!-- Branch B -->
+  <rect x="590" y="168" width="230" height="95" rx="5" fill="#fffbeb" stroke="#fde68a" stroke-width="1"/>
+  <text x="600" y="188" class="branch-title" style="fill: #b45309;">分支 B：紧急会签 / 终稿冲刺</text>
+  <text x="600" y="206" class="desc-text">阶段性冻结 Typst 源码</text>
+  <text x="600" y="224" class="desc-text">直接在 Word 中完成最终会签</text>
+  <text x="600" y="242" class="desc-text">会后一键逆向沉淀为 Typst 归档</text>
+</svg>

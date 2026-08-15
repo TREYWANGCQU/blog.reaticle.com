@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 210" width="100%" height="100%">
+  <defs>
+    <style>
+      .step-num { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", sans-serif; font-size: 11px; font-weight: 700; fill: #6366f1; }
+      .step-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", sans-serif; font-size: 13px; font-weight: 600; fill: #0f172a; }
+      .step-desc { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", sans-serif; font-size: 11px; fill: #64748b; line-height: 1.4; }
+    </style>
+    <filter id="shadow3" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#0f172a" flood-opacity="0.05"/>
+    </filter>
+    <marker id="arrow3" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#6366f1" />
+    </marker>
+  </defs>
+
+  <rect width="860" height="210" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Step 1: Input -->
+  <rect x="25" y="45" width="140" height="120" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow3)"/>
+  <text x="37" y="70" class="step-num">INPUT</text>
+  <text x="37" y="90" class="step-title">纯视觉标杆 Word</text>
+  <text x="37" y="112" class="step-desc">全篇 Normal 样式</text>
+  <text x="37" y="128" class="step-desc">手动调整字号/加粗</text>
+  <text x="37" y="144" class="step-desc">缺失原生 Heading</text>
+
+  <!-- Step 2: Feature Scan -->
+  <rect x="195" y="45" width="145" height="120" rx="8" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.2" filter="url(#shadow3)"/>
+  <text x="207" y="70" class="step-num">STEP 1: 扫描</text>
+  <text x="207" y="90" class="step-title">视觉特征提取</text>
+  <text x="207" y="112" class="step-desc">提取 &lt;w:sz&gt; 字号</text>
+  <text x="207" y="128" class="step-desc">提取 &lt;w:b&gt; 加粗</text>
+  <text x="207" y="144" class="step-desc">提取东亚字体属性</text>
+
+  <!-- Step 3: Fingerprint Clustering -->
+  <rect x="370" y="45" width="150" height="120" rx="8" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.2" filter="url(#shadow3)"/>
+  <text x="382" y="70" class="step-num">STEP 2: 聚类</text>
+  <text x="382" y="90" class="step-title">视觉指纹分层</text>
+  <text x="382" y="112" class="step-desc">按字号与权重降序</text>
+  <text x="382" y="128" class="step-desc">结合公文正则锚定</text>
+  <text x="382" y="144" class="step-desc">推导 Heading 1~4</text>
+
+  <!-- Step 4: XML Synthesizer -->
+  <rect x="550" y="45" width="145" height="120" rx="8" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.2" filter="url(#shadow3)"/>
+  <text x="562" y="70" class="step-num">STEP 3: 合成</text>
+  <text x="562" y="90" class="step-title">OpenXML 注入</text>
+  <text x="562" y="112" class="step-desc">构造 Heading 节点</text>
+  <text x="562" y="128" class="step-desc">绑定多级编号定义</text>
+  <text x="562" y="144" class="step-desc">清空文档主体内容</text>
+
+  <!-- Step 5: Output -->
+  <rect x="725" y="45" width="110" height="120" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5" filter="url(#shadow3)"/>
+  <text x="735" y="70" class="step-num">OUTPUT</text>
+  <text x="735" y="92" class="step-title">规范母版</text>
+  <text x="735" y="115" class="step-desc" style="font-weight: 600; fill: #4338ca;">reference.docx</text>
+  <text x="735" y="135" class="step-desc">大纲映射完整</text>
+  <text x="735" y="150" class="step-desc">公文字体合规</text>
+
+  <!-- Flow Arrows -->
+  <path d="M 165 105 L 190 105" stroke="#6366f1" stroke-width="1.5" fill="none" marker-end="url(#arrow3)"/>
+  <path d="M 340 105 L 365 105" stroke="#6366f1" stroke-width="1.5" fill="none" marker-end="url(#arrow3)"/>
+  <path d="M 520 105 L 545 105" stroke="#6366f1" stroke-width="1.5" fill="none" marker-end="url(#arrow3)"/>
+  <path d="M 695 105 L 720 105" stroke="#6366f1" stroke-width="1.5" fill="none" marker-end="url(#arrow3)"/>
+</svg>
