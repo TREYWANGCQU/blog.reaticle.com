@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 345" width="100%" height="100%">
+  <defs>
+    <style>
+      .col-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 13px; font-weight: 700; }
+      .col-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 11px; fill: #64748b; }
+      .card-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 600; fill: #0f172a; }
+      .card-desc { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 10.5px; fill: #64748b; }
+      .flow-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 10px; font-weight: 600; }
+    </style>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2.5" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+    <marker id="arrow-blue" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#3b82f6" />
+    </marker>
+    <marker id="arrow-purple" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#8b5cf6" />
+    </marker>
+    <marker id="arrow-gray" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#94a3b8" />
+    </marker>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="860" height="345" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Column 1: 认知与结构层 -->
+  <rect x="20" y="20" width="250" height="305" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <rect x="20" y="20" width="250" height="38" rx="8" fill="#eff6ff"/>
+  <path d="M 20 58 L 270 58" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="35" y="38" class="col-title" fill="#1d4ed8">1. 认知与结构层</text>
+  <text x="35" y="52" class="col-sub">LLM · 符号编译与逻辑编导</text>
+
+  <rect x="32" y="68" width="226" height="46" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" filter="url(#shadow)"/>
+  <text x="44" y="87" class="card-title">原始文本 / 叙事意图</text>
+  <text x="44" y="103" class="card-desc">文学文本 · 核心冲突 · 情绪基调</text>
+
+  <path d="M 145 114 L 145 124" stroke="#94a3b8" stroke-width="1.2" fill="none" marker-end="url(#arrow-gray)"/>
+
+  <rect x="32" y="126" width="226" height="46" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" filter="url(#shadow)"/>
+  <text x="44" y="145" class="card-title">意象脱敏与符号置换</text>
+  <text x="44" y="161" class="card-desc">去直白术语 · 映射具象物理载体</text>
+
+  <path d="M 145 172 L 145 182" stroke="#94a3b8" stroke-width="1.2" fill="none" marker-end="url(#arrow-gray)"/>
+
+  <rect x="32" y="184" width="226" height="46" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" filter="url(#shadow)"/>
+  <text x="44" y="203" class="card-title">曲式与律动参数化</text>
+  <text x="44" y="219" class="card-desc">Verse/Chorus 切分 · 韵脚密度规划</text>
+
+  <path d="M 145 230 L 145 240" stroke="#94a3b8" stroke-width="1.2" fill="none" marker-end="url(#arrow-gray)"/>
+
+  <rect x="32" y="242" width="226" height="46" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="44" y="261" class="card-title" fill="#1d4ed8">提示词与元标签编译</text>
+  <text x="44" y="277" class="card-desc">[Verse] [Rhodes Solo] · BPM 参数</text>
+
+  <!-- Flow 1 -> 2 -->
+  <path d="M 270 265 L 305 265" stroke="#3b82f6" stroke-width="1.8" fill="none" marker-end="url(#arrow-blue)"/>
+
+  <!-- Column 2: 声学渲染层 -->
+  <rect x="305" y="20" width="250" height="305" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <rect x="305" y="20" width="250" height="38" rx="8" fill="#faf5ff"/>
+  <path d="M 305 58 L 555 58" stroke="#e9d5ff" stroke-width="1"/>
+  <text x="320" y="38" class="col-title" fill="#7e22ce">2. 声学渲染层</text>
+  <text x="320" y="52" class="col-sub">Suno / Udio · 高维声学渲染</text>
+
+  <rect x="317" y="68" width="226" height="66" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" filter="url(#shadow)"/>
+  <text x="329" y="88" class="card-title">提示词工程与元标签解析</text>
+  <text x="329" y="106" class="card-desc">• 注入结构控制符约束走向</text>
+  <text x="329" y="122" class="card-desc">• 锁定 Contemporary R&amp;B 风格</text>
+
+  <path d="M 430 134 L 430 148" stroke="#94a3b8" stroke-width="1.2" fill="none" marker-end="url(#arrow-gray)"/>
+
+  <rect x="317" y="150" width="226" height="66" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" filter="url(#shadow)"/>
+  <text x="329" y="170" class="card-title">全曲多轨声学混合渲染</text>
+  <text x="329" y="188" class="card-desc">• 鼓组 / 808 Bass / 键盘织体生成</text>
+  <text x="329" y="204" class="card-desc">• 高表现力转音 (Melisma) 唱腔</text>
+
+  <path d="M 430 216 L 430 230" stroke="#94a3b8" stroke-width="1.2" fill="none" marker-end="url(#arrow-gray)"/>
+
+  <rect x="317" y="232" width="226" height="56" rx="6" fill="#faf5ff" stroke="#c084fc" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="329" y="253" class="card-title" fill="#7e22ce">端到端成曲输出</text>
+  <text x="329" y="271" class="card-desc">基底伴奏 + 完整演唱细节 (带音准骨架)</text>
+
+  <!-- Flow 2 -> 3 -->
+  <path d="M 555 260 L 590 260" stroke="#8b5cf6" stroke-width="1.8" fill="none" marker-end="url(#arrow-purple)"/>
+
+  <!-- Column 3: 音色重构层 -->
+  <rect x="590" y="20" width="250" height="305" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <rect x="590" y="20" width="250" height="38" rx="8" fill="#f0fdf4"/>
+  <path d="M 590 58 L 840 58" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="605" y="38" class="col-title" fill="#15803d">3. 音色重构层</text>
+  <text x="605" y="52" class="col-sub">UVR5 + RVC · 分轨与音色注入</text>
+
+  <rect x="602" y="68" width="226" height="66" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" filter="url(#shadow)"/>
+  <text x="614" y="88" class="card-title">无损人声与伴奏解耦</text>
+  <text x="614" y="106" class="card-desc">• UVR5 (`BS-Roformer` / `MDX-Net`)</text>
+  <text x="614" y="122" class="card-desc">• 提取纯干声轨 Vocals.wav 与伴奏</text>
+
+  <path d="M 715 134 L 715 148" stroke="#94a3b8" stroke-width="1.2" fill="none" marker-end="url(#arrow-gray)"/>
+
+  <rect x="602" y="150" width="226" height="66" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" filter="url(#shadow)"/>
+  <text x="614" y="170" class="card-title">个人声线特征迁移</text>
+  <text x="614" y="188" class="card-desc">• RVC v2 + RMVPE 音高提取</text>
+  <text x="614" y="204" class="card-desc">• 5~10 min 日常说话语料特征检索</text>
+
+  <path d="M 715 216 L 715 230" stroke="#94a3b8" stroke-width="1.2" fill="none" marker-end="url(#arrow-gray)"/>
+
+  <rect x="602" y="232" width="226" height="56" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="614" y="253" class="card-title" fill="#15803d">母带合成与成品输出</text>
+  <text x="614" y="271" class="card-desc">目标音色人声 + 伴奏对齐混音输出</text>
+</svg>
