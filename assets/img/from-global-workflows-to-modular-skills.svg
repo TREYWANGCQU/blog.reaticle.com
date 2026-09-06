@@ -1,0 +1,141 @@
+<!-- assets/img/from-global-workflows-to-modular-skills.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 395" width="100%" height="100%">
+  <defs>
+    <style>
+      .panel-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 13px; font-weight: 700; }
+      .panel-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 10.5px; }
+      .card-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 600; fill: #0f172a; }
+      .card-desc { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 10px; fill: #64748b; }
+      .edge-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 9.5px; font-weight: 600; }
+      .tag-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 9px; font-weight: 700; }
+    </style>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#0f172a" flood-opacity="0.05"/>
+    </filter>
+    <marker id="arrow-red" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#f87171" />
+    </marker>
+    <marker id="arrow-blue" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#3b82f6" />
+    </marker>
+    <marker id="arrow-purple" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#a855f7" />
+    </marker>
+    <marker id="arrow-emerald" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#10b981" />
+    </marker>
+    <marker id="arrow-indigo" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#6366f1" />
+    </marker>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="860" height="395" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- ==================== LEFT PANEL: LEGACY ==================== -->
+  <rect x="20" y="20" width="395" height="355" rx="8" fill="#ffffff" stroke="#fecaca" stroke-width="1.2"/>
+  
+  <!-- Left Header -->
+  <path d="M 20 28 A 8 8 0 0 1 28 20 L 407 20 A 8 8 0 0 1 415 28 L 415 62 L 20 62 Z" fill="#fff1f2"/>
+  <line x1="20" y1="62" x2="415" y2="62" stroke="#fecaca" stroke-width="1"/>
+  <text x="35" y="39" class="panel-title" fill="#991b1b">旧机制：Global Workflows 平铺</text>
+  <text x="35" y="53" class="panel-sub" fill="#e11d48">全量常驻 · 静态高底噪 · 缺乏独立计算宿主</text>
+
+  <!-- Legacy Node 1: GW -->
+  <rect x="38" y="74" width="359" height="42" rx="6" fill="#ffffff" stroke="#fca5a5" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="50" y="92" class="card-title">config/global_workflows/*.md</text>
+  <text x="50" y="106" class="card-desc">所有流程 SOP 与长篇规范平铺存放，无分层索引与按需暴露机制</text>
+
+  <!-- Arrow 1 -> 2 -->
+  <path d="M 217.5 116 L 217.5 148" stroke="#f87171" stroke-width="1.5" fill="none" marker-end="url(#arrow-red)"/>
+  <rect x="127" y="123" width="181" height="18" rx="4" fill="#fff1f2" stroke="#fecaca" stroke-width="1"/>
+  <text x="217.5" y="136" text-anchor="middle" class="edge-text" fill="#b91c1c">平铺扫描 / 高静态底噪注入</text>
+
+  <!-- Legacy Node 2: CTX1 -->
+  <rect x="38" y="148" width="359" height="42" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="50" y="166" class="card-title">LLM 上下文窗口 (Context Window)</text>
+  <text x="50" y="180" class="card-desc">无关规则占用数千 Token，稀释长上下文推理与核心代码关注度</text>
+
+  <!-- Arrow 2 -> 3 -->
+  <path d="M 217.5 190 L 217.5 222" stroke="#f87171" stroke-width="1.5" stroke-dasharray="3,3" fill="none" marker-end="url(#arrow-red)"/>
+  <rect x="137" y="197" width="161" height="18" rx="4" fill="#fff1f2" stroke="#fecaca" stroke-width="1"/>
+  <text x="217.5" y="210" text-anchor="middle" class="edge-text" fill="#b91c1c">纯文本提示词依赖 / 弱约束</text>
+
+  <!-- Legacy Node 3: TASK1 -->
+  <rect x="38" y="222" width="359" height="42" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="50" y="240" class="card-title">执行复杂任务 (AST 树 / 二进制 / 多媒体)</text>
+  <text x="50" y="254" class="card-desc">缺乏独立计算解释器，强迫模型用概率生成模拟严密执行算法</text>
+
+  <!-- Arrow 3 -> 4 -->
+  <path d="M 217.5 264 L 217.5 296" stroke="#f87171" stroke-width="1.5" fill="none" marker-end="url(#arrow-red)"/>
+  <rect x="127" y="271" width="181" height="18" rx="4" fill="#fee2e2" stroke="#fca5a5" stroke-width="1"/>
+  <text x="217.5" y="284" text-anchor="middle" class="edge-text" fill="#991b1b">概率失真 / 缺乏计算宿主</text>
+
+  <!-- Legacy Node 4: FAIL1 -->
+  <rect x="38" y="296" width="359" height="52" rx="6" fill="#fff5f5" stroke="#f87171" stroke-width="1.2" filter="url(#shadow)"/>
+  <rect x="322" y="304" width="65" height="18" rx="9" fill="#fee2e2" stroke="#fca5a5" stroke-width="1"/>
+  <text x="354" y="316" text-anchor="middle" class="tag-text" fill="#991b1b">脆弱收敛</text>
+  <text x="50" y="316" class="card-title" fill="#991b1b">格式漂移 / 准确率抖动</text>
+  <text x="50" y="333" class="card-desc" fill="#7f1d1d">XML 属性遗漏、时间戳漂移，长任务频繁陷入报错与重试死循环</text>
+
+  <!-- ==================== CENTER VS BADGE ==================== -->
+  <circle cx="430" cy="41" r="14" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="430" y="45" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#64748b">VS</text>
+
+  <!-- ==================== RIGHT PANEL: MODERN ==================== -->
+  <rect x="445" y="20" width="395" height="355" rx="8" fill="#ffffff" stroke="#bae6fd" stroke-width="1.2"/>
+
+  <!-- Right Header -->
+  <path d="M 445 28 A 8 8 0 0 1 453 20 L 832 20 A 8 8 0 0 1 840 28 L 840 62 L 445 62 Z" fill="#f0f9ff"/>
+  <line x1="445" y1="62" x2="840" y2="62" stroke="#bae6fd" stroke-width="1"/>
+  <text x="460" y="39" class="panel-title" fill="#0369a1">新架构：Modular Skills &amp; Customization</text>
+  <text x="460" y="53" class="panel-sub" fill="#0284c7">按需披露 · O(1) 索引底噪 · 确定性脚本宿主</text>
+
+  <!-- Modern Node 1: META -->
+  <rect x="463" y="74" width="359" height="42" rx="6" fill="#ffffff" stroke="#86efac" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="475" y="92" class="card-title">YAML Frontmatter (name &amp; description)</text>
+  <text x="475" y="106" class="card-desc">仅以极简元数据在启动期注入，不加载正文与执行代码</text>
+
+  <!-- Arrow 1 -> 2 -->
+  <path d="M 642.5 116 L 642.5 148" stroke="#3b82f6" stroke-width="1.5" fill="none" marker-end="url(#arrow-blue)"/>
+  <rect x="552" y="123" width="181" height="18" rx="4" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="642.5" y="136" text-anchor="middle" class="edge-text" fill="#1d4ed8">轻量注册 / O(1) Token 开销</text>
+
+  <!-- Modern Node 2: CTX2 -->
+  <rect x="463" y="148" width="359" height="42" rx="6" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="475" y="166" class="card-title">LLM 动态上下文 (Dynamic Context)</text>
+  <text x="475" y="180" class="card-desc">系统零常驻底噪，专注当前业务意图识别与语义匹配</text>
+
+  <!-- Arrow 2 -> LOAD -->
+  <path d="M 642.5 190 L 642.5 208" stroke="#6366f1" stroke-width="1.5" fill="none" marker-end="url(#arrow-indigo)"/>
+
+  <!-- Modern Node: LOAD (按需渐进披露) -->
+  <rect x="542" y="208" width="201" height="24" rx="12" fill="#e0e7ff" stroke="#818cf8" stroke-width="1.2"/>
+  <text x="642.5" y="224" text-anchor="middle" class="edge-text" fill="#3730a3">⚡ 按需渐进披露 (Slash / 意图驱动)</text>
+
+  <!-- Fork lines to 3a & 3b -->
+  <path d="M 590 232 L 549 248" stroke="#a855f7" stroke-width="1.4" fill="none" marker-end="url(#arrow-purple)"/>
+  <path d="M 695 232 L 736 248" stroke="#10b981" stroke-width="1.4" fill="none" marker-end="url(#arrow-emerald)"/>
+
+  <!-- Modern Node 3a: BODY -->
+  <rect x="463" y="249" width="172" height="42" rx="6" fill="#ffffff" stroke="#c084fc" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="473" y="267" class="card-title" fill="#6b21a8">SKILL.md 契约主体</text>
+  <text x="473" y="281" class="card-desc">认知 SOP 与推理协议 (按需单次加载)</text>
+
+  <!-- Modern Node 3b: SCRIPTS -->
+  <rect x="650" y="249" width="172" height="42" rx="6" fill="#ffffff" stroke="#34d399" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="660" y="267" class="card-title" fill="#065f46">scripts/ 确定性脚本</text>
+  <text x="660" y="281" class="card-desc">AST/正则/二进制 (计算宿主执行)</text>
+
+  <!-- Converge lines from 3a & 3b to 4 -->
+  <path d="M 549 291 C 549 301, 620 305, 642.5 306" stroke="#94a3b8" stroke-width="1.2" fill="none"/>
+  <path d="M 736 291 C 736 301, 665 305, 642.5 306" stroke="#94a3b8" stroke-width="1.2" fill="none"/>
+  <path d="M 642.5 306 L 642.5 314" stroke="#10b981" stroke-width="1.5" fill="none" marker-end="url(#arrow-emerald)"/>
+
+  <!-- Modern Node 4: SUCCESS -->
+  <rect x="463" y="315" width="359" height="52" rx="6" fill="#f0fdf4" stroke="#4ade80" stroke-width="1.2" filter="url(#shadow)"/>
+  <rect x="737" y="323" width="75" height="18" rx="9" fill="#dcfce7" stroke="#86efac" stroke-width="1"/>
+  <text x="774" y="335" text-anchor="middle" class="tag-text" fill="#15803d">确定性收敛</text>
+  <text x="475" y="335" class="card-title" fill="#15803d">工程级确定性交付与治理</text>
+  <text x="475" y="352" class="card-desc" fill="#166534">双轮熔断校验、零格式漂移、支持全局/项目分层继承与隔离</text>
+</svg>

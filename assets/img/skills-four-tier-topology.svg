@@ -1,0 +1,173 @@
+<!-- assets/img/skills-four-tier-topology.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 465" width="100%" height="100%">
+  <defs>
+    <style>
+      .hdr-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 13px; font-weight: 700; fill: #0f172a; }
+      .hdr-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 10px; fill: #64748b; }
+      .col-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 11.5px; font-weight: 700; }
+      .col-badge { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 9px; font-weight: 600; }
+      .card-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 10.5px; font-weight: 600; }
+      .card-desc { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 9px; fill: #64748b; }
+      .axis-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 9.5px; font-weight: 700; }
+      .note-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 9.5px; font-weight: 600; }
+      .note-desc { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 8.5px; }
+    </style>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#0f172a" flood-opacity="0.04"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="860" height="465" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Top Header Banner -->
+  <rect x="20" y="16" width="820" height="46" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="36" y="34" class="hdr-title">基于计算确定性与认知抽象度的四层技能拓扑 (21 项技能资产全景)</text>
+  <text x="36" y="49" class="hdr-sub">严格界定计算宿主（scripts/）必要性边界：底层算法强隔离，顶层元认知与思维范式免受脚本侵入</text>
+
+  <!-- Stats Pill -->
+  <rect x="710" y="27" width="116" height="24" rx="12" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="768" y="43" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#334155">4 Tiers · 21 Skills</text>
+
+  <!-- ==================== COLUMN 1: TIER 1 ==================== -->
+  <rect x="20" y="72" width="198" height="340" rx="8" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.2"/>
+  <path d="M 20 80 A 8 8 0 0 1 28 72 L 210 72 A 8 8 0 0 1 218 80 L 218 116 L 20 116 Z" fill="#ecfdf5"/>
+  <line x1="20" y1="116" x2="218" y2="116" stroke="#a7f3d0" stroke-width="1"/>
+  <text x="30" y="91" class="col-title" fill="#065f46">Tier 1: 确定性引擎技能</text>
+  <rect x="30" y="98" width="102" height="15" rx="3" fill="#d1fae5"/>
+  <text x="34" y="109" class="col-badge" fill="#047857">严格配置 scripts/</text>
+  <text x="195" y="108" text-anchor="end" font-size="9" font-weight="700" fill="#059669">6 项</text>
+
+  <!-- Tier 1 Cards -->
+  <rect x="29" y="124" width="180" height="40" rx="5" fill="#f0fdf4" stroke="#86efac" stroke-width="1" filter="url(#shadow)"/>
+  <text x="37" y="140" class="card-title" fill="#065f46">ai-lyrics-aligner</text>
+  <text x="37" y="154" class="card-desc">音频对齐与逐字时间戳生成</text>
+
+  <rect x="29" y="170" width="180" height="40" rx="5" fill="#f0fdf4" stroke="#86efac" stroke-width="1" filter="url(#shadow)"/>
+  <text x="37" y="186" class="card-title" fill="#065f46">audio-metadata-manager</text>
+  <text x="37" y="200" class="card-desc">媒体Tag与封面无损嵌入</text>
+
+  <rect x="29" y="216" width="180" height="40" rx="5" fill="#f0fdf4" stroke="#86efac" stroke-width="1" filter="url(#shadow)"/>
+  <text x="37" y="232" class="card-title" fill="#065f46">docx-reference-builder</text>
+  <text x="37" y="246" class="card-desc">Word XML 解包与样式聚类</text>
+
+  <rect x="29" y="262" width="180" height="40" rx="5" fill="#f0fdf4" stroke="#86efac" stroke-width="1" filter="url(#shadow)"/>
+  <text x="37" y="278" class="card-title" fill="#065f46">office-parser</text>
+  <text x="37" y="292" class="card-desc">Office / PDF 矢量切片解析</text>
+
+  <rect x="29" y="308" width="180" height="40" rx="5" fill="#f0fdf4" stroke="#86efac" stroke-width="1" filter="url(#shadow)"/>
+  <text x="37" y="324" class="card-title" fill="#065f46">typst-docx-publisher</text>
+  <text x="37" y="338" class="card-desc">Pandoc AST 预处理与注水</text>
+
+  <rect x="29" y="354" width="180" height="40" rx="5" fill="#f0fdf4" stroke="#86efac" stroke-width="1" filter="url(#shadow)"/>
+  <text x="37" y="370" class="card-title" fill="#065f46">word-to-typst-archiver</text>
+  <text x="37" y="384" class="card-desc">DOCX 清洗与 Typst 序列化</text>
+
+  <!-- ==================== COLUMN 2: TIER 2 ==================== -->
+  <rect x="228" y="72" width="198" height="340" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.2"/>
+  <path d="M 228 80 A 8 8 0 0 1 236 72 L 418 72 A 8 8 0 0 1 426 80 L 426 116 L 228 116 Z" fill="#eff6ff"/>
+  <line x1="228" y1="116" x2="426" y2="116" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="238" y="91" class="col-title" fill="#1e40af">Tier 2: 流程编译编排</text>
+  <rect x="238" y="98" width="108" height="15" rx="3" fill="#dbeafe"/>
+  <text x="242" y="109" class="col-badge" fill="#1d4ed8">纯工作流 / 脚本薄包装</text>
+  <text x="403" y="108" text-anchor="end" font-size="9" font-weight="700" fill="#2563eb">4 项</text>
+
+  <!-- Tier 2 Cards -->
+  <rect x="237" y="124" width="180" height="40" rx="5" fill="#ffffff" stroke="#93c5fd" stroke-width="1" filter="url(#shadow)"/>
+  <text x="245" y="140" class="card-title" fill="#1e40af">docx-template-sync</text>
+  <text x="245" y="154" class="card-desc">驱动 reference builder</text>
+
+  <rect x="237" y="170" width="180" height="40" rx="5" fill="#ffffff" stroke="#93c5fd" stroke-width="1" filter="url(#shadow)"/>
+  <text x="245" y="186" class="card-title" fill="#1e40af">typst-publisher</text>
+  <text x="245" y="200" class="card-desc">驱动编译与排版质检 SOP</text>
+
+  <rect x="237" y="216" width="180" height="40" rx="5" fill="#ffffff" stroke="#93c5fd" stroke-width="1" filter="url(#shadow)"/>
+  <text x="245" y="232" class="card-title" fill="#1e40af">typst-archiver</text>
+  <text x="245" y="246" class="card-desc">双阶段清洗差异比对 SOP</text>
+
+  <rect x="237" y="262" width="180" height="40" rx="5" fill="#ffffff" stroke="#93c5fd" stroke-width="1" filter="url(#shadow)"/>
+  <text x="245" y="278" class="card-title" fill="#1e40af">typst</text>
+  <text x="245" y="292" class="card-desc">本地模板与语义排版规范</text>
+
+  <!-- Tier 2 Callout -->
+  <rect x="237" y="312" width="180" height="82" rx="5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="247" y="331" class="note-title" fill="#334155">⚡ 流程编排与门禁打标</text>
+  <text x="247" y="347" class="note-desc" fill="#64748b">• 串联驱动 Tier 1 引擎完成合流</text>
+  <text x="247" y="362" class="note-desc" fill="#64748b">• 承担质量闸门（Gatekeeper）</text>
+  <text x="247" y="377" class="note-desc" fill="#64748b">• 仅持薄包装脚本或纯 SOP 契约</text>
+
+  <!-- ==================== COLUMN 3: TIER 3 ==================== -->
+  <rect x="436" y="72" width="198" height="340" rx="8" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.2"/>
+  <path d="M 436 80 A 8 8 0 0 1 444 72 L 626 72 A 8 8 0 0 1 634 80 L 634 116 L 436 116 Z" fill="#f5f3ff"/>
+  <line x1="436" y1="116" x2="634" y2="116" stroke="#ddd6fe" stroke-width="1"/>
+  <text x="446" y="91" class="col-title" fill="#5b21b6">Tier 3: 通用研发元认知</text>
+  <rect x="446" y="98" width="112" height="15" rx="3" fill="#ede9fe"/>
+  <text x="450" y="109" class="col-badge" fill="#6d28d9">认知契约 / 脚本非必要</text>
+  <text x="611" y="108" text-anchor="end" font-size="9" font-weight="700" fill="#7c3aed">6 项</text>
+
+  <!-- Tier 3 Cards -->
+  <rect x="445" y="124" width="180" height="40" rx="5" fill="#ffffff" stroke="#c4b5fd" stroke-width="1" filter="url(#shadow)"/>
+  <text x="453" y="140" class="card-title" fill="#5b21b6">collector</text>
+  <text x="453" y="154" class="card-desc">资产盘点与未知事实分流</text>
+
+  <rect x="445" y="170" width="180" height="40" rx="5" fill="#ffffff" stroke="#c4b5fd" stroke-width="1" filter="url(#shadow)"/>
+  <text x="453" y="186" class="card-title" fill="#5b21b6">analyzer</text>
+  <text x="453" y="200" class="card-desc">架构解构与边界矩阵设计</text>
+
+  <rect x="445" y="216" width="180" height="40" rx="5" fill="#ffffff" stroke="#c4b5fd" stroke-width="1" filter="url(#shadow)"/>
+  <text x="453" y="232" class="card-title" fill="#5b21b6">builder</text>
+  <text x="453" y="246" class="card-desc">最终交付物增量代码生成</text>
+
+  <rect x="445" y="262" width="180" height="40" rx="5" fill="#ffffff" stroke="#c4b5fd" stroke-width="1" filter="url(#shadow)"/>
+  <text x="453" y="278" class="card-title" fill="#5b21b6">verifier</text>
+  <text x="453" y="292" class="card-desc">分层核验与双轮熔断防御</text>
+
+  <rect x="445" y="308" width="180" height="40" rx="5" fill="#ffffff" stroke="#c4b5fd" stroke-width="1" filter="url(#shadow)"/>
+  <text x="453" y="324" class="card-title" fill="#5b21b6">reviewer</text>
+  <text x="453" y="338" class="card-desc">质量门禁与工程规范审查</text>
+
+  <rect x="445" y="354" width="180" height="40" rx="5" fill="#ffffff" stroke="#c4b5fd" stroke-width="1" filter="url(#shadow)"/>
+  <text x="453" y="370" class="card-title" fill="#5b21b6">researcher</text>
+  <text x="453" y="384" class="card-desc">证据分级与权威事实核验</text>
+
+  <!-- ==================== COLUMN 4: TIER 4 ==================== -->
+  <rect x="644" y="72" width="198" height="340" rx="8" fill="#ffffff" stroke="#fed7aa" stroke-width="1.2"/>
+  <path d="M 644 80 A 8 8 0 0 1 652 72 L 834 72 A 8 8 0 0 1 842 80 L 842 116 L 644 116 Z" fill="#fff7ed"/>
+  <line x1="644" y1="116" x2="842" y2="116" stroke="#fed7aa" stroke-width="1"/>
+  <text x="654" y="91" class="col-title" fill="#9a3412">Tier 4: 领域语义专业写作</text>
+  <rect x="654" y="98" width="108" height="15" rx="3" fill="#ffedd5"/>
+  <text x="658" y="109" class="col-badge" fill="#c2410c">思维范式 / 严禁配置脚本</text>
+  <text x="819" y="108" text-anchor="end" font-size="9" font-weight="700" fill="#ea580c">5 项</text>
+
+  <!-- Tier 4 Cards -->
+  <rect x="653" y="124" width="180" height="40" rx="5" fill="#ffffff" stroke="#fdba74" stroke-width="1" filter="url(#shadow)"/>
+  <text x="661" y="140" class="card-title" fill="#9a3412">chinese-insight-writer</text>
+  <text x="661" y="154" class="card-desc">硬核技术观察与商业分析</text>
+
+  <rect x="653" y="170" width="180" height="40" rx="5" fill="#ffffff" stroke="#fdba74" stroke-width="1" filter="url(#shadow)"/>
+  <text x="661" y="186" class="card-title" fill="#9a3412">chinese-reflective-writer</text>
+  <text x="661" y="200" class="card-desc">深度随想、留白与心智探讨</text>
+
+  <rect x="653" y="216" width="180" height="40" rx="5" fill="#ffffff" stroke="#fdba74" stroke-width="1" filter="url(#shadow)"/>
+  <text x="661" y="232" class="card-title" fill="#9a3412">english-reflective-writer</text>
+  <text x="661" y="246" class="card-desc">英文随笔、散文与智性探索</text>
+
+  <rect x="653" y="262" width="180" height="40" rx="5" fill="#ffffff" stroke="#fdba74" stroke-width="1" filter="url(#shadow)"/>
+  <text x="661" y="278" class="card-title" fill="#9a3412">industry-report-writer</text>
+  <text x="661" y="292" class="card-desc">基础设施与数字化战略研报</text>
+
+  <rect x="653" y="308" width="180" height="40" rx="5" fill="#ffffff" stroke="#fdba74" stroke-width="1" filter="url(#shadow)"/>
+  <text x="661" y="324" class="card-title" fill="#9a3412">research-paper-writer</text>
+  <text x="661" y="338" class="card-desc">工程论文规范与结构化写作</text>
+
+  <!-- Tier 4 Callout -->
+  <rect x="653" y="354" width="180" height="40" rx="5" fill="#fff7ed" stroke="#fed7aa" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="661" y="370" class="note-title" fill="#c2410c">✦ 认知留白与心智推理</text>
+  <text x="661" y="384" class="note-desc" fill="#9a3412">拒绝机械化脚本，保留思维柔性与深度</text>
+
+  <!-- ==================== BOTTOM SPECTRUM AXIS ==================== -->
+  <rect x="20" y="422" width="820" height="28" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="32" y="440" class="axis-text" fill="#047857">◀ 强计算确定性 · 二进制/AST/多媒体处理 · 必须挂载 scripts/</text>
+  <text x="430" y="440" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" fill="#64748b">─── 认知抽象层级递增 · 脚本侵入性递减 ───</text>
+  <text x="828" y="440" text-anchor="end" class="axis-text" fill="#c2410c">强认知开放性 · 逻辑推演与思维范式 · 严禁配置 scripts/ ▶</text>
+</svg>
