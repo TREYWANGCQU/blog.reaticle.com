@@ -1,0 +1,155 @@
+<!-- assets/img/typography-tokens-ssot-derivation.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="100%" height="100%">
+  <defs>
+    <style>
+      .font-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 18px; font-weight: 700; fill: #0f172a; }
+      .font-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; fill: #64748b; }
+      .font-card-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 14px; font-weight: 700; }
+      .font-card-desc { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; fill: #475569; }
+      .font-code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 12px; }
+      .font-badge { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 600; }
+      .font-edge { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 600; }
+    </style>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.05"/>
+    </filter>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#2563eb" />
+    </marker>
+    <marker id="arrow-amber" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#d97706" />
+    </marker>
+    <marker id="arrow-slate" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="960" height="500" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Top Header Banner -->
+  <rect x="24" y="18" width="912" height="52" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="44" y="40" class="font-title">设计变量单一真实源 (SSOT) 契约派生与双轨物理隔离</text>
+  <text x="44" y="58" class="font-sub">数据契约同源 · 产物物理隔离 · 消除 CSSOM 与 V8 引擎跨层嗅探开销</text>
+  <rect x="786" y="30" width="136" height="28" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="854" y="48" text-anchor="middle" class="font-badge" fill="#1e40af">SSOT Dual-Track</text>
+
+  <!-- Left Side: SSOT Source Container -->
+  <g transform="translate(32, 90)">
+    <rect width="250" height="310" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="1.4" filter="url(#shadow)"/>
+    <path d="M 32 98 A 8 8 0 0 1 40 90 L 274 90 A 8 8 0 0 1 282 98 L 282 126 L 32 126 Z" fill="#f0f9ff" transform="translate(-32, -90)"/>
+    <line x1="0" y1="36" x2="250" y2="36" stroke="#0284c7" stroke-width="1"/>
+    
+    <text x="14" y="24" class="font-card-title" fill="#0369a1">design-tokens.json</text>
+    <rect x="160" y="8" width="76" height="20" rx="4" fill="#e0f2fe"/>
+    <text x="198" y="22" text-anchor="middle" class="font-badge" fill="#0369a1">唯一真相源</text>
+
+    <!-- Content breakdown -->
+    <rect x="14" y="48" width="222" height="74" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="24" y="68" class="font-badge" fill="#0f172a">1. 离散字阶表 (Scale)</text>
+    <text x="24" y="88" class="font-code" fill="#2563eb">floor: "12px", base: "14px"</text>
+    <text x="24" y="106" class="font-code" fill="#2563eb">title: "18px", hero: "32px"</text>
+
+    <rect x="14" y="132" width="222" height="74" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="24" y="152" class="font-badge" fill="#0f172a">2. 品牌与语义色板</text>
+    <text x="24" y="172" class="font-code" fill="#059669">primary: "#2563eb"</text>
+    <text x="24" y="190" class="font-code" fill="#059669">neutral: Slate / Gray</text>
+
+    <rect x="14" y="216" width="222" height="70" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="24" y="236" class="font-badge" fill="#0f172a">3. 几何与布局间距</text>
+    <text x="24" y="256" class="font-code" fill="#7c3aed">radius: 8px, grid: 4px</text>
+    <text x="24" y="274" class="font-card-desc">严禁任何未纳管裸写常数</text>
+  </g>
+
+  <!-- Middle Derivation Arrows & Compiler Badge -->
+  <!-- Top track arrow (to CSS) -->
+  <path d="M 282 170 L 396 170" stroke="#0284c7" stroke-width="2" fill="none" marker-end="url(#arrow-blue)"/>
+  <rect x="296" y="146" width="86" height="22" rx="4" fill="#e0f2fe" stroke="#bae6fd" stroke-width="1"/>
+  <text x="339" y="161" text-anchor="middle" class="font-edge" fill="#0369a1">静态编译</text>
+
+  <!-- Bottom track arrow (to JS) -->
+  <path d="M 282 320 L 396 320" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#arrow-amber)"/>
+  <rect x="296" y="296" width="86" height="22" rx="4" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
+  <text x="339" y="311" text-anchor="middle" class="font-edge" fill="#b45309">静态编译</text>
+
+  <!-- Track 1: CSS Track -->
+  <g transform="translate(406, 90)">
+    <rect width="254" height="145" rx="8" fill="#ffffff" stroke="#38bdf8" stroke-width="1.4" filter="url(#shadow)"/>
+    <path d="M 406 98 A 8 8 0 0 1 414 90 L 652 90 A 8 8 0 0 1 660 98 L 660 126 L 406 126 Z" fill="#f0f9ff" transform="translate(-406, -90)"/>
+    <line x1="0" y1="36" x2="254" y2="36" stroke="#38bdf8" stroke-width="1"/>
+    
+    <text x="14" y="24" class="font-card-title" fill="#0369a1">src/styles/tokens.css</text>
+    <rect x="174" y="8" width="66" height="20" rx="4" fill="#e0f2fe"/>
+    <text x="207" y="22" text-anchor="middle" class="font-badge" fill="#0284c7">CSSOM</text>
+
+    <text x="14" y="58" class="font-code" fill="#0f172a">:root {</text>
+    <text x="26" y="76" class="font-code" fill="#2563eb">--font-size-floor: 12px;</text>
+    <text x="26" y="94" class="font-code" fill="#2563eb">--font-size-base: 14px;</text>
+    <text x="26" y="112" class="font-code" fill="#059669">--color-primary: #2563eb;</text>
+    <text x="14" y="130" class="font-code" fill="#0f172a">}</text>
+  </g>
+
+  <!-- Arrow CSS to DOM -->
+  <path d="M 660 162 L 720 162" stroke="#0284c7" stroke-width="1.8" fill="none" marker-end="url(#arrow-blue)"/>
+
+  <!-- Consumer: DOM -->
+  <g transform="translate(730, 90)">
+    <rect width="198" height="145" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" filter="url(#shadow)"/>
+    <rect x="12" y="10" width="76" height="20" rx="4" fill="#f1f5f9"/>
+    <text x="50" y="24" text-anchor="middle" class="font-badge" fill="#334155">排版宿主</text>
+    <text x="14" y="50" class="font-card-title" fill="#0f172a">浏览器 CSSOM</text>
+    
+    <text x="14" y="74" class="font-card-desc">
+      <tspan x="14">• Web 流式盒模型</tspan>
+      <tspan x="14" dy="1.4em">• Flexbox / Grid 自适应</tspan>
+      <tspan x="14" dy="1.4em">• UI 组件与业务页面</tspan>
+      <tspan x="14" dy="1.4em">• 响应式断点自动计算</tspan>
+    </text>
+  </g>
+
+  <!-- Track 2: JS Track -->
+  <g transform="translate(406, 255)">
+    <rect width="254" height="145" rx="8" fill="#ffffff" stroke="#fbbf24" stroke-width="1.4" filter="url(#shadow)"/>
+    <path d="M 406 263 A 8 8 0 0 1 414 255 L 652 255 A 8 8 0 0 1 660 263 L 660 291 L 406 291 Z" fill="#fffbeb" transform="translate(-406, -255)"/>
+    <line x1="0" y1="36" x2="254" y2="36" stroke="#fbbf24" stroke-width="1"/>
+    
+    <text x="14" y="24" class="font-card-title" fill="#92400e">src/utils/chartTheme.js</text>
+    <rect x="174" y="8" width="66" height="20" rx="4" fill="#fef3c7"/>
+    <text x="207" y="22" text-anchor="middle" class="font-badge" fill="#b45309">V8 Heap</text>
+
+    <text x="14" y="58" class="font-code" fill="#0f172a">export const chartTheme =</text>
+    <text x="26" y="76" class="font-code" fill="#d97706">Object.freeze({</text>
+    <text x="38" y="94" class="font-code" fill="#b45309">fontSizeFloor: 12,</text>
+    <text x="38" y="112" class="font-code" fill="#b45309">fontSizeBase: 14</text>
+    <text x="26" y="130" class="font-code" fill="#d97706">});</text>
+  </g>
+
+  <!-- Arrow JS to Chart -->
+  <path d="M 660 327 L 720 327" stroke="#d97706" stroke-width="1.8" fill="none" marker-end="url(#arrow-amber)"/>
+
+  <!-- Consumer: Chart / V8 -->
+  <g transform="translate(730, 255)">
+    <rect width="198" height="145" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" filter="url(#shadow)"/>
+    <rect x="12" y="10" width="76" height="20" rx="4" fill="#fef3c7"/>
+    <text x="50" y="24" text-anchor="middle" class="font-badge" fill="#b45309">绘图宿主</text>
+    <text x="14" y="50" class="font-card-title" fill="#0f172a">V8 脚本运行环境</text>
+    
+    <text x="14" y="74" class="font-card-desc">
+      <tspan x="14">• ECharts 图表配置</tspan>
+      <tspan x="14" dy="1.4em">• D3 数据可视化绑定</tspan>
+      <tspan x="14" dy="1.4em">• Canvas 2D / Three.js</tspan>
+      <tspan x="14" dy="1.4em">• 离线渲染与 Worker</tspan>
+    </text>
+  </g>
+
+  <!-- Bottom Architecture Defense Banner -->
+  <g transform="translate(32, 418)">
+    <rect width="896" height="64" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" filter="url(#shadow)"/>
+    <text x="20" y="28" class="font-badge" fill="#0f172a">物理完全隔离的三大核心工程收益：</text>
+    
+    <text x="20" y="50" class="font-card-desc">
+      <tspan x="20">1. 运行时宿主纯净：无需通过 getComputedStyle 进行不可靠跨层动态嗅探；</tspan>
+      <tspan x="460">2. SSR / 无 DOM 免疫：服务端渲染与自动化脚本免受异常抛出；</tspan>
+    </text>
+  </g>
+</svg>

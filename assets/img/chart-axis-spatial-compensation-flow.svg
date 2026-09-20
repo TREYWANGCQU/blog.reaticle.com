@@ -1,0 +1,180 @@
+<!-- assets/img/chart-axis-spatial-compensation-flow.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 540" width="100%" height="100%">
+  <defs>
+    <style>
+      .font-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 18px; font-weight: 700; fill: #0f172a; }
+      .font-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; fill: #64748b; }
+      .font-card-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 14px; font-weight: 700; }
+      .font-card-desc { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; fill: #475569; }
+      .font-badge { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 600; }
+      .font-edge { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 600; }
+    </style>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.05"/>
+    </filter>
+    <marker id="arrow-slate" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#64748b" />
+    </marker>
+    <marker id="arrow-emerald" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#059669" />
+    </marker>
+    <marker id="arrow-rose" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#e11d48" />
+    </marker>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="980" height="540" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Top Header Banner -->
+  <rect x="24" y="18" width="932" height="52" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="44" y="40" class="font-title">图表轴段空间代偿四级决策流</text>
+  <text x="44" y="58" class="font-sub">应对 X 轴高密度标签拥挤冲突：严禁字号降级，通过空间算法与离散控制依序代偿</text>
+  <rect x="800" y="30" width="144" height="28" rx="14" fill="#fee2e2" stroke="#fca5a5" stroke-width="1"/>
+  <text x="872" y="48" text-anchor="middle" class="font-badge" fill="#991b1b">严禁 fontSize &lt; 12px</text>
+
+  <!-- Top Conflict Box -->
+  <g transform="translate(24, 86)">
+    <rect width="932" height="52" rx="8" fill="#fff1f2" stroke="#f43f5e" stroke-width="1.2" filter="url(#shadow)"/>
+    <text x="20" y="32" class="font-card-title" fill="#9f1239">触发条件：X 轴标签计算总宽超出可用轴段宽度 (W_label &gt; ΔX_tick)</text>
+    <rect x="680" y="14" width="232" height="24" rx="4" fill="#ffffff" stroke="#f43f5e" stroke-width="1"/>
+    <text x="796" y="30" text-anchor="middle" class="font-badge" fill="#e11d48">杜绝以 9px/10px 避让重叠</text>
+  </g>
+
+  <!-- Arrow down to 4 Steps -->
+  <path d="M 490 138 L 490 162" stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#arrow-slate)"/>
+
+  <!-- 4 Step Columns -->
+  <!-- Column 1: Text Condensation -->
+  <g transform="translate(24, 168)">
+    <rect width="218" height="270" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+    <path d="M 24 176 A 8 8 0 0 1 32 168 L 234 168 A 8 8 0 0 1 242 176 L 242 204 L 24 204 Z" fill="#eff6ff" transform="translate(-24, -168)"/>
+    <line x1="0" y1="36" x2="218" y2="36" stroke="#bfdbfe" stroke-width="1"/>
+    <text x="14" y="24" class="font-card-title" fill="#1e40af">第一级：文案精炼</text>
+    
+    <text x="14" y="58" class="font-badge" fill="#0f172a">决策研判：</text>
+    <text x="14" y="78" class="font-card-desc">
+      <tspan x="14">标签语义是否存在可剪除</tspan>
+      <tspan x="14" dy="1.35em">的冗余前缀或冗长格式？</tspan>
+    </text>
+
+    <rect x="12" y="112" width="194" height="66" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+    <text x="20" y="132" class="font-badge" fill="#166534">代偿措施：</text>
+    <text x="20" y="150" class="font-card-desc" fill="#14532d">
+      <tspan x="20">• "2026-09-20" -&gt; "09-20"</tspan>
+      <tspan x="20" dy="1.35em">• "北京市朝阳区" -&gt; "朝阳"</tspan>
+    </text>
+
+    <rect x="12" y="188" width="194" height="66" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="20" y="208" class="font-badge" fill="#64748b">判定流转：</text>
+    <text x="20" y="226" class="font-card-desc">
+      <tspan x="20">已容纳 -&gt; 结束排版；</tspan>
+      <tspan x="20" dy="1.35em">若不可精炼或仍超标 -&gt; 转二级</tspan>
+    </text>
+  </g>
+
+  <!-- Flow connector 1 -> 2 -->
+  <path d="M 242 300 L 262 300" stroke="#64748b" stroke-width="1.6" fill="none" marker-end="url(#arrow-slate)"/>
+
+  <!-- Column 2: Angular Rotation -->
+  <g transform="translate(262, 168)">
+    <rect width="218" height="270" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+    <path d="M 262 176 A 8 8 0 0 1 270 168 L 472 168 A 8 8 0 0 1 480 176 L 480 204 L 262 204 Z" fill="#f5f3ff" transform="translate(-262, -168)"/>
+    <line x1="0" y1="36" x2="218" y2="36" stroke="#ddd6fe" stroke-width="1"/>
+    <text x="14" y="24" class="font-card-title" fill="#6d28d9">第二级：倾斜旋转</text>
+
+    <text x="14" y="58" class="font-badge" fill="#0f172a">决策研判：</text>
+    <text x="14" y="78" class="font-card-desc">
+      <tspan x="14">底部留白空间充足，且</tspan>
+      <tspan x="14" dy="1.35em">旋转后无横向重叠风险？</tspan>
+    </text>
+
+    <rect x="12" y="112" width="194" height="66" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+    <text x="20" y="132" class="font-badge" fill="#166534">代偿措施：</text>
+    <text x="20" y="150" class="font-card-desc" fill="#14532d">
+      <tspan x="20">• 设置 rotate: 30° / 45°</tspan>
+      <tspan x="20" dy="1.35em">• 增大底部 grid.bottom 边距</tspan>
+    </text>
+
+    <rect x="12" y="188" width="194" height="66" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="20" y="208" class="font-badge" fill="#64748b">判定流转：</text>
+    <text x="20" y="226" class="font-card-desc">
+      <tspan x="20">已容纳 -&gt; 结束排版；</tspan>
+      <tspan x="20" dy="1.35em">若底部高度受限 -&gt; 转三级</tspan>
+    </text>
+  </g>
+
+  <!-- Flow connector 2 -> 3 -->
+  <path d="M 480 300 L 500 300" stroke="#64748b" stroke-width="1.6" fill="none" marker-end="url(#arrow-slate)"/>
+
+  <!-- Column 3: Interval Sampling -->
+  <g transform="translate(500, 168)">
+    <rect width="218" height="270" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+    <path d="M 500 176 A 8 8 0 0 1 508 168 L 710 168 A 8 8 0 0 1 718 176 L 718 204 L 500 204 Z" fill="#fefce8" transform="translate(-500, -168)"/>
+    <line x1="0" y1="36" x2="218" y2="36" stroke="#fef08a" stroke-width="1"/>
+    <text x="14" y="24" class="font-card-title" fill="#a16207">第三级：隔项采样</text>
+
+    <text x="14" y="58" class="font-badge" fill="#0f172a">决策研判：</text>
+    <text x="14" y="78" class="font-card-desc">
+      <tspan x="14">数据属于连续时序，抽样</tspan>
+      <tspan x="14" dy="1.35em">展示不影响趋势整体理解？</tspan>
+    </text>
+
+    <rect x="12" y="112" width="194" height="66" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+    <text x="20" y="132" class="font-badge" fill="#166534">代偿措施：</text>
+    <text x="20" y="150" class="font-card-desc" fill="#14532d">
+      <tspan x="20">• 设置 interval: 'auto'</tspan>
+      <tspan x="20" dy="1.35em">• 或固定步长按奇偶隔项抽样</tspan>
+    </text>
+
+    <rect x="12" y="188" width="194" height="66" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="20" y="208" class="font-badge" fill="#64748b">判定流转：</text>
+    <text x="20" y="226" class="font-card-desc">
+      <tspan x="20">已容纳 -&gt; 结束排版；</tspan>
+      <tspan x="20" dy="1.35em">若每个分类均刚性必显 -&gt; 四级</tspan>
+    </text>
+  </g>
+
+  <!-- Flow connector 3 -> 4 -->
+  <path d="M 718 300 L 738 300" stroke="#64748b" stroke-width="1.6" fill="none" marker-end="url(#arrow-slate)"/>
+
+  <!-- Column 4: Truncate + Tooltip -->
+  <g transform="translate(738, 168)">
+    <rect width="218" height="270" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)"/>
+    <path d="M 738 176 A 8 8 0 0 1 746 168 L 948 168 A 8 8 0 0 1 956 176 L 956 204 L 738 204 Z" fill="#f0fdf4" transform="translate(-738, -168)"/>
+    <line x1="0" y1="36" x2="218" y2="36" stroke="#bbf7d0" stroke-width="1"/>
+    <text x="14" y="24" class="font-card-title" fill="#15803d">第四级：截断与浮窗</text>
+
+    <text x="14" y="58" class="font-badge" fill="#0f172a">决策研判：</text>
+    <text x="14" y="78" class="font-card-desc">
+      <tspan x="14">极端超长分类且无法抽样，</tspan>
+      <tspan x="14" dy="1.35em">需保留用户交互查看全貌？</tspan>
+    </text>
+
+    <rect x="12" y="112" width="194" height="66" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+    <text x="20" y="132" class="font-badge" fill="#166534">代偿措施：</text>
+    <text x="20" y="150" class="font-card-desc" fill="#14532d">
+      <tspan x="20">• overflow: 'truncate' (省略号)</tspan>
+      <tspan x="20" dy="1.35em">• 联动 Tooltip 悬浮完整展现</tspan>
+    </text>
+
+    <rect x="12" y="188" width="194" height="66" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="20" y="208" class="font-badge" fill="#64748b">终极保障：</text>
+    <text x="20" y="226" class="font-card-desc">
+      <tspan x="20">全量信息浮窗交互呈现；</tspan>
+      <tspan x="20" dy="1.35em">页面布局规整无突兀溢出</tspan>
+    </text>
+  </g>
+
+  <!-- Bottom Convergence Banner -->
+  <g transform="translate(24, 456)">
+    <rect width="932" height="66" rx="8" fill="#1e293b" stroke="#0f172a" stroke-width="1" filter="url(#shadow)"/>
+    <rect x="16" y="20" width="160" height="26" rx="4" fill="#059669"/>
+    <text x="96" y="37" text-anchor="middle" class="font-badge" fill="#ffffff">终局约束：12px 底线</text>
+    
+    <text x="194" y="38" class="font-card-desc" fill="#f8fafc">
+      <tspan x="194">以上所有代偿分支均绝对保持 fontSize &gt;= 12px（CHART_TOKENS.fontSizeFloor），</tspan>
+      <tspan x="194" dy="1.35em">用优雅的交互与空间几何算法取代粗暴的“缩字号避险”，消除大屏与投影视件下的视觉灾难。</tspan>
+    </text>
+  </g>
+</svg>

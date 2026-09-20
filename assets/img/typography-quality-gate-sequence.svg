@@ -1,0 +1,128 @@
+<!-- assets/img/typography-quality-gate-sequence.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" width="100%" height="100%">
+  <defs>
+    <style>
+      .font-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 18px; font-weight: 700; fill: #0f172a; }
+      .font-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; fill: #64748b; }
+      .font-actor-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 13px; font-weight: 700; }
+      .font-actor-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; fill: #64748b; }
+      .font-msg { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 600; }
+      .font-msg-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; }
+      .font-badge { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 600; }
+    </style>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.05"/>
+    </filter>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#2563eb" />
+    </marker>
+    <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#e11d48" />
+    </marker>
+    <marker id="arrow-emerald" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#059669" />
+    </marker>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="980" height="560" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Top Header Banner -->
+  <rect x="24" y="18" width="932" height="52" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="44" y="40" class="font-title">基于 XML DOM 与 AST 语义解析的确定性质量门禁时序</text>
+  <text x="44" y="58" class="font-sub">机器确定性阻断与生成器闭环修复，拒绝静态正则漏报与人工微调引发的几何坍塌</text>
+  <rect x="800" y="30" width="144" height="28" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="872" y="48" text-anchor="middle" class="font-badge" fill="#1e40af">DOM Gate Sequence</text>
+
+  <!-- Lifeline Vertical Dashed Lines -->
+  <line x1="140" y1="138" x2="140" y2="520" stroke="#cbd5e1" stroke-width="1.6" stroke-dasharray="4,4"/>
+  <line x1="410" y1="138" x2="410" y2="520" stroke="#cbd5e1" stroke-width="1.6" stroke-dasharray="4,4"/>
+  <line x1="680" y1="138" x2="680" y2="520" stroke="#cbd5e1" stroke-width="1.6" stroke-dasharray="4,4"/>
+  <line x1="870" y1="138" x2="870" y2="520" stroke="#cbd5e1" stroke-width="1.6" stroke-dasharray="4,4"/>
+
+  <!-- Actor Header Boxes -->
+  <!-- Actor 1: Generator -->
+  <g transform="translate(45, 86)">
+    <rect width="190" height="48" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2" filter="url(#shadow)"/>
+    <text x="95" y="22" text-anchor="middle" class="font-actor-title" fill="#0f172a">代码生成器</text>
+    <text x="95" y="38" text-anchor="middle" class="font-actor-sub">Builder / Local Skill</text>
+  </g>
+
+  <!-- Actor 2: DOM Quality Gate Tool -->
+  <g transform="translate(315, 86)">
+    <rect width="190" height="48" rx="6" fill="#f0f9ff" stroke="#38bdf8" stroke-width="1.2" filter="url(#shadow)"/>
+    <text x="95" y="22" text-anchor="middle" class="font-actor-title" fill="#0369a1">确定性质检工具</text>
+    <text x="95" y="38" text-anchor="middle" class="font-actor-sub">validate_svg.py / AST</text>
+  </g>
+
+  <!-- Actor 3: Reviewer -->
+  <g transform="translate(585, 86)">
+    <rect width="190" height="48" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" filter="url(#shadow)"/>
+    <text x="95" y="22" text-anchor="middle" class="font-actor-title" fill="#0f172a">全局审查门禁</text>
+    <text x="95" y="38" text-anchor="middle" class="font-actor-sub">Reviewer (零重排契约)</text>
+  </g>
+
+  <!-- Actor 4: Target -->
+  <g transform="translate(795, 86)">
+    <rect width="150" height="48" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2" filter="url(#shadow)"/>
+    <text x="75" y="22" text-anchor="middle" class="font-actor-title" fill="#15803d">最终代码合入</text>
+    <text x="75" y="38" text-anchor="middle" class="font-actor-sub">Target Release</text>
+  </g>
+
+  <!-- Step 1: Generator -> Tool -->
+  <path d="M 140 160 L 410 160" stroke="#2563eb" stroke-width="1.8" fill="none" marker-end="url(#arrow-blue)"/>
+  <rect x="160" y="146" width="220" height="22" rx="4" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="270" y="161" text-anchor="middle" class="font-msg" fill="#1e40af">1. 输出代码并触发静态质检</text>
+
+  <!-- Note over Tool -->
+  <g transform="translate(295, 180)">
+    <rect width="230" height="42" rx="6" fill="#fffbeb" stroke="#fde68a" stroke-width="1" filter="url(#shadow)"/>
+    <text x="115" y="20" text-anchor="middle" class="font-badge" fill="#92400e">XML DOM 递归解析</text>
+    <text x="115" y="34" text-anchor="middle" class="font-msg-sub" fill="#78350f">计算继承字号、内联 style 与类选择器</text>
+  </g>
+
+  <!-- Alt Block Container -->
+  <rect x="60" y="235" width="860" height="270" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+  
+  <!-- Branch 1: Fail Header -->
+  <rect x="60" y="235" width="180" height="26" rx="4" fill="#fee2e2"/>
+  <text x="74" y="252" class="font-badge" fill="#991b1b">[FAIL] 探测到字号 &lt; 12px</text>
+
+  <!-- Message 2a: Tool -->> Generator (Fail) -->
+  <path d="M 410 286 L 140 286" stroke="#e11d48" stroke-width="1.8" stroke-dasharray="4,4" fill="none" marker-end="url(#arrow-red)"/>
+  <rect x="156" y="272" width="230" height="22" rx="4" fill="#fff1f2" stroke="#fecdd3" stroke-width="1"/>
+  <text x="271" y="287" text-anchor="middle" class="font-msg" fill="#be123c">2a. 返回非零退出码 1 (打印违规节点)</text>
+
+  <!-- Message 2b: Generator self-loop -->
+  <path d="M 140 306 L 190 306 L 190 334 L 140 334" stroke="#e11d48" stroke-width="1.5" fill="none" marker-end="url(#arrow-red)"/>
+  <text x="200" y="316" class="font-msg" fill="#b91c1c">2b. 执行三级空间代偿重排</text>
+  <text x="200" y="332" class="font-msg-sub" fill="#881337">文案修剪 -&gt; tspan 显式折行 -&gt; 容器与画布级联外扩</text>
+
+  <!-- Dividing line between branches -->
+  <line x1="60" y1="352" x2="920" y2="352" stroke="#cbd5e1" stroke-width="1.4" stroke-dasharray="5,5"/>
+
+  <!-- Branch 2: Pass Header -->
+  <rect x="60" y="354" width="180" height="26" rx="4" fill="#dcfce7"/>
+  <text x="74" y="371" class="font-badge" fill="#166534">[PASS] 全部字号 &gt;= 12px</text>
+
+  <!-- Message 3a: Tool -> Reviewer -->
+  <path d="M 410 400 L 680 400" stroke="#059669" stroke-width="1.8" fill="none" marker-end="url(#arrow-emerald)"/>
+  <rect x="440" y="386" width="210" height="22" rx="4" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="545" y="401" text-anchor="middle" class="font-msg" fill="#15803d">3a. 校验通过，返回退出码 0</text>
+
+  <!-- Message 3b: Reviewer self-loop -->
+  <path d="M 680 418 L 730 418 L 730 446 L 680 446" stroke="#475569" stroke-width="1.5" fill="none" marker-end="url(#arrow-blue)"/>
+  <text x="740" y="428" class="font-msg" fill="#0f172a">3b. 宏观质量验收</text>
+  <text x="740" y="444" class="font-msg-sub" fill="#475569">零重排契约：严禁微调坐标</text>
+
+  <!-- Message 4: Reviewer -> Target -->
+  <path d="M 680 472 L 870 472" stroke="#059669" stroke-width="1.8" fill="none" marker-end="url(#arrow-emerald)"/>
+  <rect x="700" y="458" width="150" height="22" rx="4" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="775" y="473" text-anchor="middle" class="font-msg" fill="#15803d">4. 合入生产主干交付</text>
+
+  <!-- Bottom lifelines end pills -->
+  <circle cx="140" cy="520" r="4" fill="#94a3b8"/>
+  <circle cx="410" cy="520" r="4" fill="#94a3b8"/>
+  <circle cx="680" cy="520" r="4" fill="#94a3b8"/>
+  <circle cx="870" cy="520" r="4" fill="#94a3b8"/>
+</svg>

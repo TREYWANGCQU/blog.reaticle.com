@@ -1,0 +1,194 @@
+<!-- assets/img/typography-four-tier-governance-architecture.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="100%" height="100%">
+  <defs>
+    <style>
+      .font-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 18px; font-weight: 700; fill: #0f172a; }
+      .font-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; fill: #64748b; }
+      .font-tier-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 14px; font-weight: 700; }
+      .font-tier-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; fill: #64748b; }
+      .font-card-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 13px; font-weight: 700; }
+      .font-card-desc { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; fill: #475569; }
+      .font-badge { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 600; }
+      .font-edge { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 12px; font-weight: 600; }
+    </style>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.05"/>
+    </filter>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#2563eb" />
+    </marker>
+    <marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#7c3aed" />
+    </marker>
+    <marker id="arrow-emerald" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#059669" />
+    </marker>
+    <marker id="arrow-amber" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#d97706" />
+    </marker>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1000" height="700" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Top Header Banner -->
+  <rect x="24" y="18" width="952" height="52" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="44" y="40" class="font-title">排版治理四层边界契约矩阵拓扑</text>
+  <text x="44" y="58" class="font-sub">领域抽象隔离 · 单一真相源派生 · 几何算法底座 · 确定性质检门禁</text>
+  <rect x="806" y="30" width="150" height="28" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="881" y="48" text-anchor="middle" class="font-badge" fill="#1e40af">4-Tier Governance</text>
+
+  <!-- ==================== TIER 0 & TIER 0.5 CONTAINER ==================== -->
+  <rect x="24" y="82" width="952" height="120" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <path d="M 24 90 A 8 8 0 0 1 32 82 L 968 82 A 8 8 0 0 1 976 90 L 976 114 L 24 114 Z" fill="#f1f5f9"/>
+  <line x1="24" y1="114" x2="976" y2="114" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="40" y="102" class="font-tier-title" fill="#1e293b">Tier 0: 全局元工作流层 (Meta-Workflows)</text>
+  <text x="360" y="102" class="font-tier-sub">纯净调度与质量验收，严禁硬编码特定技术栈标签与像素常数</text>
+
+  <!-- Tier 0 Cards -->
+  <g transform="translate(40, 126)">
+    <rect width="180" height="64" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1" filter="url(#shadow)"/>
+    <text x="14" y="24" class="font-card-title" fill="#0f172a">builder</text>
+    <text x="14" y="44" class="font-card-desc">通用代码生成与补丁构建</text>
+    <text x="14" y="58" class="font-card-desc">恪守规范执行任务交付</text>
+  </g>
+
+  <g transform="translate(236, 126)">
+    <rect width="180" height="64" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1" filter="url(#shadow)"/>
+    <text x="14" y="24" class="font-card-title" fill="#0f172a">reviewer</text>
+    <text x="14" y="44" class="font-card-desc">宏观质量验收与门禁判定</text>
+    <text x="14" y="58" class="font-badge" fill="#b91c1c">零重排契约 (打回重构)</text>
+  </g>
+
+  <g transform="translate(432, 126)">
+    <rect width="180" height="64" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1" filter="url(#shadow)"/>
+    <text x="14" y="24" class="font-card-title" fill="#0f172a">verifier</text>
+    <text x="14" y="44" class="font-card-desc">微观逻辑与数学边界证伪</text>
+    <text x="14" y="58" class="font-card-desc">排查局部最优与伪假设</text>
+  </g>
+
+  <!-- Tier 0.5: Global Rule Constitution Pill Box -->
+  <g transform="translate(630, 122)">
+    <rect width="330" height="72" rx="8" fill="#fef2f2" stroke="#f87171" stroke-width="1.4" filter="url(#shadow)"/>
+    <rect x="12" y="10" width="80" height="20" rx="4" fill="#fee2e2"/>
+    <text x="52" y="24" text-anchor="middle" class="font-badge" fill="#991b1b">Tier 0.5 宪法</text>
+    <text x="100" y="25" class="font-card-title" fill="#991b1b">GEMINI.md 全局工程底线</text>
+    <text x="14" y="46" class="font-card-desc" fill="#7f1d1d">
+      <tspan x="14">UI &amp; Typography Floor: 强制 font-size &gt;= 12px</tspan>
+      <tspan x="14" dy="1.35em">严禁 9/10px 降级，严禁 transform: scale 缩放作弊</tspan>
+    </text>
+  </g>
+
+  <!-- Injection Arrows from Constitution to Tier 0 & Tier 1 -->
+  <path d="M 630 158 L 612 158" stroke="#ef4444" stroke-width="1.6" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 795 194 L 795 214 L 540 214 L 540 232" stroke="#ef4444" stroke-width="1.6" stroke-dasharray="3,3" fill="none" marker-end="url(#arrow-purple)"/>
+  <rect x="620" y="206" width="130" height="18" rx="3" fill="#fee2e2" stroke="#fca5a5" stroke-width="1"/>
+  <text x="685" y="219" text-anchor="middle" class="font-edge" fill="#b91c1c">隐式注入底线约束</text>
+
+  <!-- ==================== TIER 1: GLOBAL DOMAIN CURATORS & ENGINES ==================== -->
+  <rect x="24" y="236" width="952" height="136" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <path d="M 24 244 A 8 8 0 0 1 32 236 L 968 236 A 8 8 0 0 1 976 244 L 976 268 L 24 268 Z" fill="#eff6ff"/>
+  <line x1="24" y1="268" x2="976" y2="268" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="40" y="256" class="font-tier-title" fill="#1e40af">Tier 1: 全局领域中枢 (Global Domain Curators &amp; Engines)</text>
+  <text x="420" y="256" class="font-tier-sub">抽象封装领域规则，提供脚手架推导、几何排版引擎与确定性检验工具</text>
+
+  <!-- WTC -->
+  <g transform="translate(40, 280)">
+    <rect width="280" height="78" rx="6" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="1.2" filter="url(#shadow)"/>
+    <text x="14" y="24" class="font-card-title" fill="#0369a1">web-theme-curator</text>
+    <text x="14" y="44" class="font-card-desc">前端主题脚手架与 SSOT 派生中枢</text>
+    <text x="14" y="62" class="font-card-desc">输入自然语言诉求，生成 design-tokens 契约</text>
+  </g>
+
+  <!-- SD -->
+  <g transform="translate(360, 280)">
+    <rect width="280" height="78" rx="6" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.2" filter="url(#shadow)"/>
+    <text x="14" y="24" class="font-card-title" fill="#6d28d9">svg-designer</text>
+    <text x="14" y="44" class="font-card-desc">矢量排版核心与确定性 DOM 质检中枢</text>
+    <text x="14" y="62" class="font-card-desc">三级空间代偿几何算法 + validate_svg.py 门禁</text>
+  </g>
+
+  <!-- SSC -->
+  <g transform="translate(680, 280)">
+    <rect width="280" height="78" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2" filter="url(#shadow)"/>
+    <text x="14" y="24" class="font-card-title" fill="#15803d">svg-skill-curator</text>
+    <text x="14" y="44" class="font-card-desc">局部矢量技能脚手架与编目中枢</text>
+    <text x="14" y="62" class="font-card-desc">初始化项目级技能，探测版本漂移并同步</text>
+  </g>
+
+  <!-- Connectors from Tier 1 to Tier 2 -->
+  <!-- WTC to tokens.json -->
+  <path d="M 180 358 L 180 404" stroke="#0284c7" stroke-width="1.8" fill="none" marker-end="url(#arrow-blue)"/>
+  <rect x="110" y="372" width="140" height="18" rx="3" fill="#e0f2fe" stroke="#bae6fd" stroke-width="1"/>
+  <text x="180" y="385" text-anchor="middle" class="font-edge" fill="#0369a1">脚手架推导生成</text>
+
+  <!-- SD to Local Skill -->
+  <path d="M 500 358 L 500 480 L 760 480" stroke="#7c3aed" stroke-width="1.8" fill="none" marker-end="url(#arrow-purple)"/>
+  <rect x="520" y="470" width="170" height="18" rx="3" fill="#ede9fe" stroke="#ddd6fe" stroke-width="1"/>
+  <text x="605" y="483" text-anchor="middle" class="font-edge" fill="#6d28d9">提供几何算法与校验底座</text>
+
+  <!-- SSC to Local Skill -->
+  <path d="M 820 358 L 820 440" stroke="#16a34a" stroke-width="1.8" fill="none" marker-end="url(#arrow-emerald)"/>
+  <rect x="750" y="372" width="140" height="18" rx="3" fill="#dcfce7" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="820" y="385" text-anchor="middle" class="font-edge" fill="#15803d">脚手架初始化部署</text>
+
+  <!-- ==================== TIER 2: PROJECT WORKSPACE ==================== -->
+  <rect x="24" y="408" width="952" height="270" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <path d="M 24 416 A 8 8 0 0 1 32 408 L 968 408 A 8 8 0 0 1 976 416 L 976 440 L 24 440 Z" fill="#faf5ff"/>
+  <line x1="24" y1="440" x2="976" y2="440" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="40" y="428" class="font-tier-title" fill="#6b21a8">Tier 2: 项目工程与局部特化层 (Project Workspace)</text>
+  <text x="400" y="428" class="font-tier-sub">物理分离的落地代码资产与项目专属私有矢量技能</text>
+
+  <!-- Sub-block 1: SSOT Tokens & Derived Assets -->
+  <g transform="translate(40, 452)">
+    <rect width="200" height="120" rx="6" fill="#f8fafc" stroke="#0284c7" stroke-width="1.4" filter="url(#shadow)"/>
+    <rect x="12" y="10" width="70" height="18" rx="3" fill="#e0f2fe"/>
+    <text x="47" y="23" text-anchor="middle" class="font-badge" fill="#0369a1">SSOT 契约</text>
+    <text x="14" y="46" class="font-card-title" fill="#0f172a">design-tokens.json</text>
+    <text x="14" y="68" class="font-card-desc">
+      <tspan x="14">统一固化定义：</tspan>
+      <tspan x="14" dy="1.35em">• 品牌中性色阶与主题色</tspan>
+      <tspan x="14" dy="1.35em">• 标准离散字阶表 (12~32px)</tspan>
+    </text>
+  </g>
+
+  <!-- Arrows from tokens.json to CSS and JS -->
+  <path d="M 240 488 L 290 488" stroke="#0284c7" stroke-width="1.6" fill="none" marker-end="url(#arrow-blue)"/>
+  <path d="M 240 536 L 290 536" stroke="#0284c7" stroke-width="1.6" fill="none" marker-end="url(#arrow-blue)"/>
+
+  <!-- Derived CSS Asset -->
+  <g transform="translate(294, 458)">
+    <rect width="300" height="60" rx="6" fill="#f0f9ff" stroke="#38bdf8" stroke-width="1.2" filter="url(#shadow)"/>
+    <text x="14" y="24" class="font-card-title" fill="#0369a1">src/styles/tokens.css</text>
+    <text x="14" y="44" class="font-card-desc">CSS Custom Properties，注册于浏览器 CSSOM 供流式排版消费</text>
+  </g>
+
+  <!-- Derived JS Asset -->
+  <g transform="translate(294, 526)">
+    <rect width="300" height="60" rx="6" fill="#fefce8" stroke="#facc15" stroke-width="1.2" filter="url(#shadow)"/>
+    <text x="14" y="24" class="font-card-title" fill="#a16207">src/utils/chartTheme.js</text>
+    <text x="14" y="44" class="font-card-desc">Object.freeze 常量，供 V8 引擎中 ECharts / Canvas / D3 读取</text>
+  </g>
+
+  <!-- Notice tag below Derived assets -->
+  <rect x="294" y="596" width="300" height="28" rx="4" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="444" y="614" text-anchor="middle" class="font-edge" fill="#475569">⚡ 物理完全分离：防范 SSR 动态嗅探崩溃</text>
+
+  <!-- Sub-block 2: Local SVG Skill -->
+  <g transform="translate(636, 452)">
+    <rect width="324" height="172" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.4" filter="url(#shadow)"/>
+    <rect x="14" y="12" width="104" height="20" rx="4" fill="#dcfce7"/>
+    <text x="66" y="26" text-anchor="middle" class="font-badge" fill="#15803d">项目特化技能</text>
+    <text x="14" y="52" class="font-card-title" fill="#14532d">.agents/skills/project-svg-generator</text>
+    
+    <text x="14" y="74" class="font-card-desc">
+      <tspan x="14">• SKILL.md: 绑定项目特化色板与业务图标规范</tspan>
+      <tspan x="14" dy="1.4em">• 继承全局 svg-designer 几何算法与断行折行逻辑</tspan>
+      <tspan x="14" dy="1.4em">• scripts/validate_svg.py: 内置 XML DOM 质检钩子</tspan>
+      <tspan x="14" dy="1.4em">• 杜绝项目特有视觉资产对 Tier 0 元工作流的反向污染</tspan>
+    </text>
+
+    <rect x="14" y="138" width="296" height="22" rx="4" fill="#ffffff" stroke="#86efac" stroke-width="1"/>
+    <text x="162" y="153" text-anchor="middle" class="font-badge" fill="#166534">受控边界：全局中枢不存私货，私有需求不出项目</text>
+  </g>
+</svg>
