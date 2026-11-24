@@ -1,0 +1,4 @@
+<!-- _includes/mermaid.html -->
+{% if page.mermaid != false and content contains 'language-mermaid' %}
+  <script type="module" src="{{ '/assets/js/mermaid-init.js' | relative_url }}"></script>
+{% endif %}
