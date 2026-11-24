@@ -117,6 +117,7 @@ const lightbox = (() => {
     if (svg) {
       svg.style.transform = currentZoom === 1.0 ? '' : `scale(${currentZoom})`;
       svg.style.transformOrigin = 'top left';
+      svg.style.margin = currentZoom === 1.0 ? '' : '0';
     }
     zoomLabel.textContent = `${Math.round(currentZoom * 100)}%`;
   }
@@ -220,14 +221,58 @@ const lightbox = (() => {
     document.body.appendChild(overlay);
   }
 
+  function cloneSvgWithScopedIds(svgElement) {
+    const clonedSvg = svgElement.cloneNode(true);
+    const origId = svgElement.getAttribute('id');
+    if (!origId) {
+      return clonedSvg;
+    }
+
+    const scopedId = `${origId}-lightbox`;
+    clonedSvg.setAttribute('id', scopedId);
+
+    clonedSvg.querySelectorAll('style').forEach((styleEl) => {
+      if (styleEl.textContent && styleEl.textContent.includes(origId)) {
+        styleEl.textContent = styleEl.textContent.split(origId).join(scopedId);
+      }
+    });
+
+    clonedSvg.querySelectorAll('[id]').forEach((el) => {
+      const childId = el.getAttribute('id');
+      if (childId && childId.startsWith(origId)) {
+        el.setAttribute('id', scopedId + childId.slice(origId.length));
+      }
+    });
+
+    const refAttrs = [
+      'marker-start',
+      'marker-mid',
+      'marker-end',
+      'clip-path',
+      'filter',
+      'mask',
+      'fill',
+      'stroke',
+    ];
+    clonedSvg.querySelectorAll('*').forEach((el) => {
+      refAttrs.forEach((attr) => {
+        const val = el.getAttribute(attr);
+        if (val && val.includes(`#${origId}`)) {
+          el.setAttribute(attr, val.split(`#${origId}`).join(`#${scopedId}`));
+        }
+      });
+    });
+
+    return clonedSvg;
+  }
+
   function open(svgElement, triggerEl) {
     ensureMounted();
     lastFocusedElement = triggerEl || document.activeElement;
     currentZoom = 1.0;
     canvas.innerHTML = '';
 
-    const clonedSvg = svgElement.cloneNode(true);
-    clonedSvg.removeAttribute('id');
+    const clonedSvg = cloneSvgWithScopedIds(svgElement);
     canvas.appendChild(clonedSvg);
 
     overlay.hidden = false;
